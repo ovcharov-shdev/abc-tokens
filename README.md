@@ -30,3 +30,10 @@ Builds the app for production to the `build` folder.
 ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
 ## Assembly automation
 ![Gulp](https://img.shields.io/badge/GULP-%23CF4647.svg?style=for-the-badge&logo=gulp&logoColor=white)
+
+## Project features
+- Responsive adaptive design up to 320px
+- Using Nunjucks template engine from Mozilla
+- Google Page Speed optimisation
+- Pixel Perfect
+

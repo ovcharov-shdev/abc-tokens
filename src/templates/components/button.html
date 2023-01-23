@@ -1,0 +1,10 @@
+{% macro button (tag = 'button', href, type = 'primary', text, size, isSubmit, class, attrString) %}
+	<{{ tag }}
+		class="button {{'button--' + type if type}} {{'button--' + size if size}} {{ class if class }}"
+		{{'href=' + href if tag == 'a'}}
+		{{'type=submit' if isSubmit}}
+		{{ attrString if attrString }}
+	>
+		{{ text }}
+  </{{ tag }}>
+{% endmacro %}

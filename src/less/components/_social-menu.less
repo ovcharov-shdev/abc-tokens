@@ -1,0 +1,35 @@
+.social-menu {
+	display: flex;
+	margin: 0 -20px;
+	padding-left: 0;
+
+	@media @md {
+		margin-bottom: 29px;
+	}
+
+	&__elem {
+		padding: 0 20px;
+		list-style-type: none;
+		text-align: center;
+		@media @xs {
+			padding: 0 10px;
+		}
+	}
+	
+	&__link {
+		display: inline-block;
+		font-size: 26px;
+		color: #C9C8C8;
+		text-decoration: none;
+
+		&:hover {
+			color: #EBB024;
+		}
+	}
+
+	&__icon {
+		width: 32px;	
+		height: auto;	
+		transition: color 0.2s;
+	}
+}

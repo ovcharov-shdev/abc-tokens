@@ -1,0 +1,19 @@
+<aside class="faq__box">
+	{% for item in settingsFaq %}
+	<section class="faq{{ ' faq--active' if loop.index == 2}}">
+		<a href="javascript:void(0)" class="faq__question-box" title="">
+			<span class="faq__icon-box">
+				{{ icon('cross', 'faq__icon') }}
+			</span>
+
+			<span class="faq__question">{{ item.question }}</span>
+		</a>
+
+		<div class="faq__answer-box">
+			<p class="faq__answer">
+				{{ item.answer }}
+			</p>
+		</div>
+	</section>
+	{% endfor %}
+</aside>

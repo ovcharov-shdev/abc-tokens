@@ -1,0 +1,30 @@
+{% from "templates/components/icon.html" import icon %}
+
+{% macro person(name, photo, linkedin=false) %}
+	<section class="section section--person person">
+			<div class="container">
+					<img src="images/team/{{photo}}" alt="{{name}}" class="person__photo">
+					<div class="section__header">
+							<h1 class="section__title{{' section__title--linkedin' if linkedin}}">
+								{{name}}
+								{% if linkedin %}
+									<a class="person__linkedin" href="{{linkedin}}" target="_blank">
+										{{ icon('linkedin2', 'person__linkedin-icon') }}
+									</a>
+								{% endif %}
+							</h1>							
+					</div>
+					<div class="person__content">
+							{{ caller() }}	
+							{% if linkedin %}
+								<div class="person__linkedin-bottom">
+									<a class="person__linkedin" href="{{linkedin}}" target="_blank">
+										Learn more
+										{{ icon('linkedin2', 'person__linkedin-icon') }}
+									</a>
+								</div>
+							{% endif %}						
+					</div>
+			</div>
+	</section>
+{% endmacro %}

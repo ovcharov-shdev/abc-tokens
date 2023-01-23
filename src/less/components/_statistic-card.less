@@ -1,0 +1,215 @@
+.statistic-card {
+  position: relative;
+  height: 100%;
+  padding: 19px 27px 13px 39px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 28px 0 rgba(#000, 0.08);
+  overflow: hidden;
+
+  @media @md {
+    padding: 11px 17px 20px 22px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 7px;
+    height: 100%;
+    content: "";
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-size: 17px;
+    line-height: 35px;
+    font-weight: 600;
+    color: @color-blue;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    &--gray {
+      color: #837f7f;
+    }
+
+    @media @md {
+      margin-bottom: 0;
+      font-size: 12px;
+      line-height: 26px;
+    }
+  }
+
+  &__text {
+    font-size: 43px;
+    letter-spacing: -0.03em;
+
+    .statistic-card__label {
+      margin-bottom: 0;
+    }
+
+    @media @xl {
+      font-size: 36px;
+    }
+
+    @media @md {
+      font-size: 24px;
+    }
+  }
+
+  &--sales {
+    &::before {
+      background-color: @color-blue;
+    }
+
+    &__col {
+      max-width: 50%;
+      margin-bottom: 13px;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    &__range-body {
+      position: relative;
+      width: 100%;
+      height: 6px;
+      background-color: #dfdede;
+      border-radius: 6px;
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 95px;
+        height: 100%;
+        background-color: @color-blue;
+        content: "";
+      }
+    }
+
+    &__range-data {
+    }
+
+    &__range-marker {
+      position: relative;
+      display: inline-block;
+      margin-left: 51px;
+      padding-top: 14px;
+      font-size: 46px;
+      letter-spacing: 0.01em;
+
+      @media @md {
+        margin-left: 61px;
+        padding-top: 17px;
+      }
+
+      &::before {
+        position: absolute;
+        top: -16px;
+        left: 28px;
+        width: 21px;
+        height: 30px;
+        background-image: url("../images/index/range_marker.svg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        content: "";
+
+        @media @md {
+          top: -14px;
+          left: 19px;
+        }
+      }
+
+      @media @xl {
+        font-size: 36px;
+      }
+
+      @media @md {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &--rate {
+    &::before {
+      background-color: @color-red;
+    }
+
+    &__price-block {
+      margin-bottom: 10px;
+    }
+
+    &__curency-block {
+      &__label {
+        margin-bottom: 1px;
+      }
+    }
+
+    &__curency-row {
+      display: flex;
+      margin: 0 -16px;
+      
+      @media @xl {
+        margin: 0 -8px;
+      }
+
+      @media @lg {
+        margin: 0 -16px;
+      }
+
+      @media @md {
+        margin: 0 -5px;
+      }
+    }
+
+    &__curency {
+      padding: 9px 25px 9px 15px;
+      border-radius: 30px;
+
+      &__logo {
+        @media @xl {
+          height: 26px;
+        }
+        @media @lg {
+          height: initial;
+        }
+        @media @md {
+          height: 26px;
+        }
+      }
+
+      &__name {
+        @media @xl {
+          font-size: 16px;
+        }
+        @media @lg {
+          font-size: 21px;
+        }
+        @media @md {
+          font-size: 16px;
+        }
+      }
+
+      &--active {
+        background-color: #f4f4f4;
+      }
+
+      @media @xl {
+        padding: 0 8px;
+      }
+
+      @media @lg {
+        padding: 9px 25px 9px 15px;
+      }
+
+      @media @md {
+        padding: 0 5px;
+      }
+    }
+  }
+}

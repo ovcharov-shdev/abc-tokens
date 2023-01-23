@@ -1,0 +1,37 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/person.html" import person %}
+
+{% block page_title %}		
+	Nate Bixler
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem=4) }}
+{% endblock %}
+{% block page_content %}
+		<section class="breadcrumbs">
+				<div class="container">
+						<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Home</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="about.html">About</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<span class="breadcrumbs__current">Nate Bixler</span></li>
+						</ul>
+				</div>
+		</section>
+		{% call person(name="Nate Bixler", photo="nate_bixler.jpg", linkedin="https://www.linkedin.com/in/nate-bixler-9936362a/") %}
+				<p class="person__paragraph">As Operations Manager for Brookfield Properties’ Ohio portfolio, Nate Bixler has created a platform for profitable, safe, and sustainable multifamily communities while encouraging operational efficiencies and associate development.  After devoting many years to the construction industry, Nate chose to further his professional career with Safeguard Properties, an industry-leading mortgage field servicing company.  Here, he managed a large national client portfolio executing and resolving all insurable damage to lender-owned HUD and REO properties. In his tenure at Safeguard Properties, he quickly took over the operations and construction for a company-funded local community initiative to rebuild vacant abandoned properties in Cleveland affected by the mortgage foreclosure crisis.  This opportunity led Nate to his current role with Brookfield Properties, previously Forest City Realty Trust. While managing the operations of 1800+ apartments and all Capital improvements, Nate also hosts monthly networking meetings for the Northern Ohio Apartment Association and has served as the Education Chair for the Northern Ohio Institute of Real Estate Management (IREM). He currently holds his A.R.M. (Accredited Residential Manager) designation and is seeking his C.P.M. (Certified Property Manager) designation in 2021. Nate is rooted in his values for community improvement and the idea that everyone deserves a safe place to call home.</p>				
+		{% endcall %}
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem=3, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

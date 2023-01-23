@@ -1,0 +1,66 @@
+{% from "templates/components/mobile-menu.html" import mobileMenu %}
+{% from "templates/components/button.html" import button %}
+{% from "./icon.html" import icon %}
+
+{% macro header(isTransparent = false, activeItem = 1, data, signedIn = false, cssClass="") %}
+	<header class="header{{' header--transparent' if isTransparent}}{{' ' + cssClass if cssClass }}">
+		<div class="header__container container">
+			<button class="header__burger"></button>
+			<a href="index.html" class="header__logo-link" title="Home page">
+					<img src="./images/logo_dark.svg" alt="ABC Fintech" class="header__logo-image">
+			</a>
+			<nav class="header__nav main-menu" role="navigation">
+				<ul class="main-menu__list">
+					{% for item in data %}
+							{% if item.parent %}
+								<li class="main-menu__item main-menu__item--parent">
+										<a href="javascript:void(0)" class="main-menu__link{{' main-menu__link--active' if loop.index==activeItem}}">{{ item.title }}</a>
+										<ul class="main-menu__sublist">
+											{% for subItem in item.subMenu %}
+												<li class="main-menu__subitem">
+														<a href="{{'index.html' if activeItem!=1}}{{ subItem.link }}" class="main-menu__sublink">{{ subItem.title }}</a>
+												</li>
+											{% endfor %}
+										</ul>
+								</li>
+							{% else %}
+								<li class="main-menu__item">
+										<a href="{{ item.link }}" class="main-menu__link{{' main-menu__link--active' if loop.index == activeItem}}">{{ item.title }}</a>
+								</li>
+							{%endif%}
+					{% endfor %}
+					</ul>
+			</nav>
+			{% if signedIn %}
+				<section class="header__user-panel user-menu">
+					<a href="profile.html" class="user-menu__link" title="Open user profile">
+						<span class="user-menu__img" style="background-image: url('images/user-avatar/001.jpg')"></span>
+						<span class="user-menu__label">My Profile</span>
+						{{ icon('chevron-bold', 'user-menu__icon') }}
+					</a>
+					<ul class="user-menu__item-list">
+						<li class="user-menu__item user-menu__item--for-mobile">
+							<a href="profile.html" class="user-menu__sub-link">
+								{{ icon('user', 'user-menu__item-icon') }}
+								My Profile
+							</a>
+						</li>
+						<li class="user-menu__item">
+							<a href="#" class="user-menu__sub-link" data-modal="logout">
+								{{ icon('out', 'user-menu__item-icon') }}
+								Log Out
+							</a>
+						</li>
+					</ul>
+				</section>
+			{% else %}
+				<div class="header__user-panel">
+					{{ button(type="outline", size="small", text="Login", class="header__login-button", attrString='data-modal=login data-form=login')}}
+					{{ button(type="transparent", size="small", text="Sign up", class="header__signup-button", attrString='data-modal=login data-form=register') }}
+					<button class="header__mobile-login-button" data-modal="login" data-form="login"></button>
+				</div>
+			{% endif %}
+		</div>
+	</header>
+	{{ mobileMenu(activeItem = activeItem, data) }}
+{% endmacro %}

@@ -1,0 +1,28 @@
+
+{% from "templates/components/form-group.html" import formGroup %}
+{% from "templates/components/button.html" import button %}
+
+<form action="#" class="modal--login__form form-restore-email">
+		<p class="modal--login__before-text">
+			Please enter your email, and we will send 
+			you instructions on how to restore 
+			your password
+		</p>
+		{{formGroup(id='restore-email',
+				inputType="email",
+				labelText='Email',
+				isRequired=true,
+				class="modal__form-group")
+		}}
+		<div class="form-restore-email__submit-row">
+			{{ button(type="3d", text="Send", class="modal--login__submit", isSubmit=true)}}	
+		</div>
+		<p class="modal--login__text">
+			I remembered my password 
+			<a class="modal--login__link" href="#" data-form="login">Log In</a>
+		</p>	
+		<p class="modal--login__text">
+			Do not have an account? 
+			<a class="modal--login__link" href="#" data-form="register">Register</a>
+		</p>																					
+</form>	

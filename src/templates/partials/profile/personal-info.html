@@ -1,0 +1,78 @@
+<aside class="data-card">
+	<div class="data-card__body">
+		<section class="user-details">
+			<span class="user-details__img" style="background-image: url('images/user-avatar/001.jpg');"></span>
+			<p class="user-details__box">
+				<strong class="user-details__name">Samanta Smith</strong>
+				<span class="user-details__address">2134  Mount Street, Munger<br> Michigan, MI 48747 </span>
+				<a href="mailto:samtrix@hotmail.com" class="user-details__email" title="">samtrix@hotmail.com</a>
+				<a href="tel:19041292109" class="user-details__phone" title="">
+					{{ icon('phone', 'user-details__phone-icon') }}
+					+1 (904) 129-21-09
+				</a>
+				<i class="user-details__tag">25 years</i>
+			</p>
+		</section>
+	</div>
+
+	<div class="data-card__control">
+		{{ button(type = 'outline', text = 'CHANGE', attrString = 'data-modal=personal-data') }}
+	</div>
+</aside>
+
+<aside class="data-card">
+	<div class="data-card__body">
+		{{formGroup(
+				inputType="password",
+				labelText='Password',
+				value="************",
+				class="data-card__password",
+				id="passw")
+		}}
+	</div>
+
+	<div class="data-card__control">
+		{{ button(type = 'outline', text = 'CHANGE', attrString="data-modal=password-edit") }}
+	</div>
+</aside>
+
+<aside class="data-card">
+	<div class="data-card__body">
+		{{formGroup(
+				labelText='Credit Card',
+				isDisabled=true,
+				value="VISA **** **** **** 0739",
+				class="data-card__input",
+				id="cc")
+		}}
+
+		{{formGroup(
+				labelText='Exchange Tokens',
+				isDisabled=true,
+				value="s13o9me9-t893o91k5e84n-h28e9re",
+				class="data-card__input",
+				button='copy',
+				id="tokens")
+		}}
+
+		{{formGroup(
+				labelText='Token Balance',
+				isDisabled=true,
+				value="0.1882010929",
+				class="data-card__input",
+				id="tbalance")
+		}}
+
+		{{formGroup(
+				labelText='USD Balance',
+				isDisabled=true,
+				value="12.22",
+				class="data-card__input",
+				id="usdb")
+		}}
+	</div>
+
+	<div class="data-card__control">
+		{{ button(type = 'outline', text = 'CHANGE', attrString="data-modal=card-data") }}
+	</div>
+</aside>

@@ -1,0 +1,33 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -14px;
+
+  &--about {
+    align-items: center;
+
+    @media @md {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+
+  &--statistic {
+    margin-bottom: 43px;
+
+    @media @md {
+      margin-bottom: 35px;
+    }
+  }
+
+  &--team-department {
+    justify-content: center;
+  }
+
+  &--portfolio-page {
+    @media @from-xl {
+      max-width: 1055px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{% from "./icon.html" import icon %}
+
+{% macro formGroup(id, inputType = 'text', labelText, errorText, afterText, value, isRequired, isDisabled, isError, class, button, attrString) %}
+		<div class="form-group{{' form-group--required' if isRequired}}{{' form-group--disabled' if isDisabled}}{{' form-group--error' if isError}}{{' form-group--show-label' if value}} {{class if class}}">				
+				<div class="form-group__wrapper">
+						{% if labelText %}
+								<label for="{{id}}" class="form-group__label">{{labelText}}</label>
+						{% endif %}
+						{% if (inputType == 'textarea') %}
+							<textarea id="{{id}}" class="form-group__textarea" value="{{value}}"{{ ' required' if isRequired }}{{ ' disabled' if isDisabled }} {{ attrString if attrString }}>{{value}}</textarea>
+						{% else %}
+								<input type="{{inputType}}" id="{{id}}" class="form-group__input" value="{{value}}"{{ ' required' if isRequired }}{{ ' disabled' if isDisabled }} {{ attrString if attrString }}>
+						{% endif %}
+						{% if button %}
+							<button class="form-group__button">
+								{{ icon(button, 'form-group__icon') }}
+							</button>
+						{% endif %}
+						{% if errorText %}
+								<span class="form-group__error">{{errorText}}</span>
+						{% endif %}
+						{% if afterText %}
+								<span class="form-group__after">{{afterText}}</span>
+						{% endif %}
+				</div>
+		</div>
+{% endmacro %}

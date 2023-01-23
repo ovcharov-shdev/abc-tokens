@@ -1,0 +1,14 @@
+{% macro teamMember(link, photo, blockSize, name, job, jobTitle) %}
+	<a class="col col--team-member team-member team-member--{{blockSize}}" href="{{link}}">
+		<img class="team-member__photo" src="images/team/{{photo}}" alt="{{name}}">
+		<div class="team-member__wrapper">
+			<h6 class="team-member__name">{{name}}</h6>
+			{% if job %}
+				<p class="team-member__job">{{job | escape | nl2br}}</p>
+			{%endif%}
+			{% if jobTitle %}
+				<p class="team-member__job-title">{{jobTitle | escape | nl2br}}</p>
+			{%endif%}
+		</div>
+	</a>
+{% endmacro %}

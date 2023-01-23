@@ -1,0 +1,54 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/person.html" import person %}
+
+{% block page_title %}		
+	Stacey Nadolny
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem=4) }}
+{% endblock %}
+{% block page_content %}
+		<section class="breadcrumbs">
+				<div class="container">
+						<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Home</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="about.html">About</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<span class="breadcrumbs__current">Stacey Nadolny</span></li>
+						</ul>
+				</div>
+		</section>
+		{% call person(name="Stacey Nadolny", photo="stacey_nadolny.jpg", linkedin="https://www.linkedin.cn/") %}			
+			<p class="person__paragraph">Managing Director and Senior Partner for HVS Chicago, Stacey Nadolny, MAI, has completed thousands of assignments for hotels and resorts in the Great Lakes region. Years of repeated visits to hotel markets in and around Chicago and throughout Illinois, Indiana, Michigan, and Ohio—along with the relationships formed with local hotel owners, operators, and city officials—give Stacey a deep and enduring perspective on how these hotel markets grow and change. </p>
+			<p class="person__paragraph">Her extensive experience and skills are highlighted below.</p>
+			<ul class="person__list">
+				<li class="person__list-item">Stacey has published numerous articles on major regional markets, including Chicago, Columbus, Cincinnati, Cleveland, and Detroit and is a frequent contributor to the Chicago Tribune and Crain’s Chicago Business.</li>
+				<li class="person__list-item">Stacey has hosted numerous HVS Hotel Investment Summits in both Columbus and Chicago, which are networking events for industry participants. In addition to regular speaking engagements at major hotel events such as Hunter Conference, NYU, ROI Conference, IHLA, AAHOA, and the Society of Chief Appraisers, Stacey periodically conducts Hotel Valuation Seminars at both Cornell University and Michigan State University.</li>
+				<li class="person__list-item">Stacey remains active with her alma mater, having served a term as the president of her local Cornell Hotel Society Chapter and providing mentorship to current students. Most recently, she spoke at Ithaca’s Castell@College, aimed at providing support for women in hospitality, and was on the committee to formalize mentorship within the Track and Field Team and Cornell Athletics.</li>
+				<li class="person__list-item">Hotel development and feasibility consulting are Stacey’s primary areas of expertise as she has assisted hundreds of developers over the years. She has considerable experience evaluating urban assets, including the following:
+					<ul class="person__list">
+						<li class="person__list-item">Foundation Hotel, Detroit, Michigan</li>
+						<li class="person__list-item">The Joseph, a Le Meriden Hotel, Columbus, Ohio</li>
+						<li class="person__list-item">The Summit Hotel, Cincinnati, Ohio</li>
+						<li class="person__list-item">Renaissance Hotel, Toledo, Ohio</li>
+						<li class="person__list-item">Sable at Navy Pier Hotel, Chicago (coming April 2020) </li>
+					</ul>
+				</li>
+			</ul>
+			<p class="person__paragraph">She has worked in the HVS Texas, Atlanta, Columbus, and Chicago offices and has consulted on thousands of projects in markets across the country. Moreover, she enjoys working with legal teams on hospitality-related litigation engagements.</p>
+			<p class="person__paragraph">Stacey serves as a Regional Representative for the Chicago Chapter of the Appraisal Institute and as a board member for Cornell’s Center for Real Estate Finance (CREF); Stacey is also a member of the Real Estate Finance Forum (REFF), a state-certified general appraiser, and a Designated Member of the Appraisal Institute (MAI).</p>
+		{% endcall %}
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem=3, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

@@ -1,0 +1,130 @@
+.header {
+  position: fixed;
+  z-index: 1500;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 11px;
+  padding-bottom: 16px;
+  border-top: 2px solid rgba(@color-gray, 0.3);
+  background-color: #fff;
+  box-shadow: 0 1px 12px rgba(#000, 0.08);
+  transition: box-shadow 0.5s, border-color 0.2s;
+
+  @media @xxl {
+    padding-top: 9px;
+    padding-bottom: 15px;
+  }
+
+  @media @md {
+    border-top-width: 0;
+  }
+
+
+  &--transparent {
+    background-color: rgba(#fff, 0);
+    box-shadow: none;
+  }
+
+  &--transparent-shadow {
+    box-shadow: 0 1px 12px rgba(#000, 0.08);
+    border-color: rgba(#fff, 0);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__burger {
+    display: none;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(#fff, 0);
+    background-image: url("../images/burger.svg");
+    background-size: 34px 34px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @media @lg {
+      display: block;
+      margin-top: 4px;
+    }
+  }
+
+  &__logo-link {
+    display: inline-block;
+    margin-right: 33px;
+
+    @media @xxl {
+      margin-top: 10px;
+      margin-right: 0;
+      height: 34px;
+    }
+
+    @media @lg {
+      margin-top: 0;
+    }
+  }
+
+  &__logo-image {
+    max-width: 100%;
+
+    @media @xxl {
+      height: 34px;
+    }
+
+    @media @lg {
+      height: 36px;
+    }
+  }
+
+  &__user-panel {
+    display: flex;
+    padding-top: 9px;
+  }
+
+  &__login-button {
+    margin-right: 15px;
+
+    @media @xxl {
+      display: none;
+    }
+  }
+
+  &__signup-button {
+    @media @xxl {
+      display: none;
+    }
+  }
+
+  &__mobile-login-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 2px solid rgba(#fff, .6);
+    border-radius: 50%;
+    background-color: rgba(#fff, 0);
+    background-image: url("../images/user.svg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @media @xxl {
+      display: block;
+    }
+
+    @media @lg {      
+      margin-top: -6px;
+    }
+  }
+
+  &__user-panel { // .header__user-panel
+    
+  }
+}

@@ -1,0 +1,53 @@
+<table class="data-table">
+	<tbody class="data-table__body">
+		<tr class="data-table__row data-table__row--header">
+			<th class="data-table__cell data-table__cell--header">Date &amp; Time</th>
+			<th class="data-table__cell data-table__cell--header">Type</th>
+			<th class="data-table__cell data-table__cell--header">Currency</th>
+			<th class="data-table__cell data-table__cell--header">Amount</th>
+			<th class="data-table__cell data-table__cell--header">Fee</th>
+			<th class="data-table__cell data-table__cell--header">Status</th>
+		</tr>
+
+		{% for item in transactionHistory %}
+				<tr class="data-table__row data-cell{{' data-table__row--disabled' if item.status=='Pending'}}">
+					<td class="data-table__cell data-cell__datetime">
+						{{ item.date }}
+						<span class="data-cell__time">{{ item.time }}</span>
+					</td>
+					<td class="data-table__cell data-cell__title">
+						{{ item.type }}
+					</td>
+					<td class="data-table__cell data-cell__currency">
+						<div class="data-cell__currency-box">
+							{% if item.currency == 'USD' %}
+								{{ icon('dollar', 'data-cell__currency-icon') }}
+							{% endif %}
+							{% if item.currency == 'BTC' %}
+								{{ icon('bitcoin', 'data-cell__currency-icon') }}
+							{% endif %}
+							{% if item.currency == 'ETH' %}
+								{{ icon('ethereum', 'data-cell__currency-icon') }}
+							{% endif %}
+							{% if item.currency == 'ABC' %}
+								{{ icon('abc', 'data-cell__currency-icon') }}
+							{% endif %}
+							{% if item.currency == 'DAI' %}
+								{{ icon('dai', 'data-cell__currency-icon') }}
+							{% endif %}
+							{{ item.currency }}
+						</div>
+					</td>
+					<td class="data-table__cell data-cell__amount" data-cell-header="Amount">
+						{{ item.amount }}
+					</td>
+					<td class="data-table__cell data-cell__fee" data-cell-header="Fee">
+						{{ item.fee }}
+					</td>
+					<td class="data-table__cell data-cell__status" data-cell-header="Status">
+						{{ item.status }}
+					</td>
+				</tr>
+		{% endfor %}
+	</tbody>
+</table>

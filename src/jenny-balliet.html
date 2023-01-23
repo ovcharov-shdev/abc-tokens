@@ -1,0 +1,38 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/person.html" import person %}
+
+{% block page_title %}		
+	Jenny Balliet
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem=4) }}
+{% endblock %}
+{% block page_content %}
+		<section class="breadcrumbs">
+				<div class="container">
+						<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Home</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="about.html">About</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<span class="breadcrumbs__current">Jenny Balliet</span></li>
+						</ul>
+				</div>
+		</section>
+		{% call person(name="Jenny Balliet", photo="jenny_balliet.jpg") %}
+				<p class="person__paragraph">Ms. Balliet is an exceptionally-skilled professional who consults on strategic engagement with a relentless passion for coaching entrepreneurs & companies at all stages of growth. She has a unique ability to intuitively identify the needs of multiple stakeholders simultaneously. Ms. Balliet leverages her natural ability to educate and empower others through both oral and written communication. Coupled with her social media ingenuity and coordinating interests in law and policy, she optimizes these marketing and public relations efforts, particularly in the realms of Blockchain, FinTech, digital assets, and entertainment. She serves as Director of Presentations at Athena.Trade.</p>
+				<p class="person__paragraph">Prior to moving into capital markets & technology, she spent greater than 25 years in education both in and out of the classroom, where she has assisted in driving many policy initiatives from education funding reform to healthcare, all with a keen focus on engagement. She speaks and coaches on the importance of ‘genuine collaboration’ & ‘engagement to optimize and empower.’ Her Master’s thesis centered around Technology adoption, ‘Increasing Parental Involvement Through Technology: Marriage or Divorce?’ (2004).</p>
+		{% endcall %}
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem=3, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

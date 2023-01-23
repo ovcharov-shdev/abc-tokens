@@ -1,0 +1,35 @@
+.text {
+	margin-bottom: 0;
+	font-size: 21px;
+	line-height: 45px;
+
+	@media @xl {
+		font-size: 16px;
+		line-height: 35px;
+	}
+
+	&--reviews {
+		margin-bottom: 73px;
+
+    @media @md {
+      margin-bottom: 32px;
+      line-height: 33px;
+    }
+	}
+	
+	&__blue {
+		font-size: 33px;
+		font-weight: 400;
+		color: @color-blue;
+
+		@media @xl {
+			font-size: 26px;
+		}
+
+		&--reviews {
+			@media @md {
+				font-size: 36px;
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/person.html" import person %}
+
+{% block page_title %}		
+	Dan Elliott
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem=4) }}
+{% endblock %}
+{% block page_content %}
+		<section class="breadcrumbs">
+				<div class="container">
+						<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Home</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="about.html">About</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<span class="breadcrumbs__current">Dan Elliott</span></li>
+						</ul>
+				</div>
+		</section>
+		{% call person(name="Dan Elliott", photo="dan_elliot.jpg", linkedin="https://www.linkedin.cn/") %}
+				<p class="person__paragraph">Dan joined SRS with nearly fifteen years of experience in real estate, both as an advisor and investor, and has worked exclusively with clients in the acquisition and disposition of leased investment properties nationwide. Dan, along with Sean Lutz, led the net lease group at SVN Commercial Real Estate Advisors, and has experience in single-tenant sales, anchored and unanchored shopping center sales, power center and portfolio dispositions and pre-development sales. He has a long list of repeat clients, ranging from small private investors to some of the largest investment funds and international institutional groups. His ability to assist his clients buy and effectively market quality leased investment properties has led to his ranking as one of the top advisors nationwide year-after-year.</p>
+		{% endcall %}
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem=3, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

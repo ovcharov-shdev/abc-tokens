@@ -1,0 +1,82 @@
+.invest-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 37px 46px 38px;
+  box-shadow: 0 2px 20px rgba(#000, 0.02);
+  border-radius: 10px;
+  background-color: #fff;
+
+  @media @sm {
+    padding: 27px 16px 38px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.45;
+
+    @media @md {
+      margin-bottom: 17px;
+      font-size: 16px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 7px;
+    @media @lg {
+      flex-direction: column;
+    }
+  }
+
+  &__amount-col {
+    max-width: 63%;
+
+    @media @lg {
+      max-width: 100%;
+    }
+  }
+
+  &__curency-col {
+    max-width: 37%;
+
+    @media @lg {
+      max-width: 100%;
+    }
+  }
+
+  &__sign {
+    margin: 0 9px;
+    font-size: 18px;
+    line-height: 1.45;
+
+    @media @xl {
+      display: none;
+    }
+  }
+
+  &__card {
+    margin-bottom: 41px;
+
+    @media @md {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__button-box {
+    margin-top: auto;
+    text-align: right;
+
+    @media @lg {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    min-width: 245px;
+
+    @media @md {
+      min-width: 184px;
+    }    
+  }
+}

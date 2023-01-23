@@ -1,0 +1,40 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/person.html" import person %}
+
+{% block page_title %}		
+	Jay Schiesser
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem=4) }}
+{% endblock %}
+{% block page_content %}
+		<section class="breadcrumbs">
+				<div class="container">
+						<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Home</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="about.html">About</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<span class="breadcrumbs__current">Jay Schiesser</span></li>
+						</ul>
+				</div>
+		</section>
+		{% call person(name="Jay Schiesser", photo="jay_schiesser.jpg") %}
+				<p class="person__paragraph">Mr. Schiesser has specialized in commercial real estate investment advisory and capital markets for over 20 years. As a Principal of JP Partners, Mr. Schiesser has worked on diverse transactions with major assets types including multifamily, industrial, office, retail, hospitality and for-sale residential as well as special use assets including infrastructure, self-storage, parking, healthcare, restaurants, golf courses, marinas and automotive retail. Mr. Schiesser has executed over $3.0 billion of transactions including acquisitions, dispositions and finance.</p>
+				<p class="person__paragraph">Prior to founding JP Partners, Mr. Schiesser was an original member and partner of Patriot Capital, a boutique real estate investment banking firm. Mr. Schiesser originated, negotiated and closed over $1.2 billion in transactions. Mr. Schiesser was also a member of Credit Suisse First Boston in the Investment Banking Division.</p>
+				<p class="person__paragraph">Prior to CSFB, Mr. Schiesser was a member of Fitch Ratings in the CMBS Group. Mr. Schiesser’s primary responsibilities included derivation of CMBS bond subordination levels for floating and fixed-rate transactions. Mr. Schiesser was a member of KPMG LLP in the Valuation Group. He was responsible for advisory and valuation of real estate, M&E and intangible assets for corporate transactions and taxation.</p>
+				<p class="person__paragraph">Mr. Schiesser earned a Master of Science in Real Estate Law from John Marshall Law School and a Bachelor of Science in Real Estate Finance from the University of Illinois at Urbana-Champaign Commerce College.</p>
+		{% endcall %}
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem=3, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

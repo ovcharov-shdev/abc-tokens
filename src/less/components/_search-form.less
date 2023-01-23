@@ -1,0 +1,40 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 51px;
+
+	@media @md {
+		margin-bottom: 39px;
+	}
+
+  &__form {
+    position: relative;
+		width: 100%;		
+		max-width: 494px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 15px;
+    left: 22px;
+    width: 28px;
+    height: auto;
+  }
+
+  &__input {
+		width: 100%;
+    padding: 18px 20px 17px 66px;
+    border: 1px solid #ececec;
+    border-radius: 60px;
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: @color-gray;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: @color-blue;
+      outline: none;
+    }
+  }
+}

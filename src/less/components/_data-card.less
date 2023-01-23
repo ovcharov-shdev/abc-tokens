@@ -1,0 +1,44 @@
+.data-card {
+	background: #fff;
+	box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.02);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	max-width: 820px;
+	margin: 0 auto;
+	padding: 45px 46px 55px;
+
+	@media @md {
+		flex-direction: column;
+		align-items: center;
+		padding: 33px 16px 38px;
+	}
+
+	&:not(:last-of-type) {
+		margin-bottom: 16px;
+	}
+
+	&__body { // .data-card__body
+		flex-grow: 1;
+
+		@media @md {
+			width: 100%;
+		}
+
+		@media @from-md {
+			padding-right: 33px;
+		}
+	}
+
+	&__control { // .data-card__control
+		flex: none;
+		padding-top: 24px;
+	}
+
+	&__password { // .data-card__password
+		@media @from-md {
+			margin-bottom: -18px;
+			max-width: 400px;
+		}
+	}
+}

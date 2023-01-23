@@ -1,0 +1,37 @@
+{% macro footer(activeItem = 1, data) %}
+		<footer class="footer">
+				<div class="container">
+						<div class="footer__top row">
+								<div class="footer__col-info col">
+										<a href="index.html" class="footer__logo-link" title="Home page">
+												<img src="./images/logo_light.svg" alt="ABC Fintech" class="footer__logo-image">
+										</a>
+										<address class="footer__addr">3206 W. Armitage Avenue,
+												<br>
+												Chicago,<br>
+												IL 60647
+										</address>
+										<a class="footer__phone" href="tel:+13129339196">+1 (312) 933-9196</a>
+								</div>
+								{% set footerMenuCounter = 1 %}
+								{% for category in data.footer_menu %}
+									<div class="footer__col-nav {{'footer__col-nav--'+category.category.toLowerCase()}} col">
+											<h6 class="footer__nav-category">{{category.category}}</h6>
+											<ul class="footer__nav-list">
+												{% for item in category.list %}
+													<li class="footer__nav-elem">
+															<a class="footer__nav-link{{' footer__nav-link--active' if activeItem==footerMenuCounter}}" href="{{'index.html' if activeItem!=1 and category.category.toLowerCase()=='overview'}}{{item.link}}"{{' target=_blank' if item.target_blank}}>{{item.text}}</a>
+													</li>
+													{% set footerMenuCounter = footerMenuCounter + 1 %}
+												{% endfor %}												
+											</ul>
+									</div>
+								{% endfor %}								
+						</div>
+						<div class="footer__bottom">
+								<p class="footer__copyright">© 2021 ABC Tokens, LLC. <br>All Rights Reserved.</p>
+								{% include "templates/partials/social-menu.html" %}								
+						</div>
+				</div>
+		</footer>
+{% endmacro %}

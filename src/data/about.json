@@ -1,0 +1,130 @@
+{
+	"team": [
+		{
+			"department": "Executive Team",
+			"block_size": "big",
+			"member_list": [
+				{
+					"link": "matthew-andelman.html",
+					"photo": "matthew_andelman.jpg",
+					"name": "Matthew Andelman",
+					"job": "CEO & Co-Founder"
+				},
+				{
+					"link": "douglas-mccright.html",
+					"photo": "douglas_mccright.jpg",
+					"name": "Douglas McCright",
+					"job": "COO/CFO & Co-Founder"
+				},
+				{
+					"link": "cto-and-strategy-lead.html",
+					"photo": "nophoto.jpg",
+					"name": "",
+					"job": "CTO and Strategy Lead"
+				},
+				{
+					"link": "gregory-milsk.html",
+					"photo": "gregory_milsk.jpg",
+					"name": "Gregory Milsk",
+					"job": "Director of Development"
+				},
+				{
+					"link": "anthony-tate.html",
+					"photo": "anthony_tate.jpg",
+					"name": "Anthony Tate",
+					"job": "Director of Underwriting"
+				},
+				{
+					"link": "michael-сicchinelli.html",
+					"photo": "michael_сicchinelli.jpg",
+					"name": "Michael “Micky” Cicchinelli",
+					"job": "Director of Property Management"
+				}			
+			]
+		},
+		{
+			"department": "General Advisory Board",
+			"block_size": "medium",
+			"member_list": [
+				{
+					"link": "joe-calvanico.html",
+					"photo": "joe_calvanico.jpg",
+					"name": "Joe Calvanico",
+					"job": "Managing Director, Loop Capital",
+					"job_title": "Expert Real Estate Appraiser"
+				},
+				{
+					"link": "adrian-kolody.html",
+					"photo": "adrian_kolody.jpg",
+					"name": "Adrian Kolody",
+					"job": "CEO, FerroSync Technologies Inc.",
+					"job_title": "Technology Advisor & Strategist"
+				}	,
+				{
+					"link": "tom-boerman.html",
+					"photo": "tom_boerman.jpg",
+					"name": "Tom Boerman",
+					"job": "Head of Real Estate & Construction, GreenReb",
+					"job_title": "Construction Consultant"
+				},
+				{
+					"link": "jay-schiesser.html",
+					"photo": "jay_schiesser.jpg",
+					"name": "Jay Schiesser",
+					"job": "Principal, JP Real Estate Partners",
+					"job_title": "CRE Investment & Capital Markets Advisor"
+				},
+				{
+					"link": "brian-jenkins.html",
+					"photo": "brian_jenkins.jpg",
+					"name": "Brian Jenkins",
+					"job": "First Vice President, Bank of Hope",
+					"job_title": "Finance & Blockchain \nConsultant"
+				},
+				{
+					"link": "jenny-balliet.html",
+					"photo": "jenny_balliet.jpg",
+					"name": "Jenny Balliet",
+					"job": "CEO, Lula & Co.",
+					"job_title": "Marketing/Social Media Consultant"
+				}
+			]
+		},
+		{
+			"department": "Asset Specific Advisors",
+			"block_size": "small",
+			"member_list": [
+				{
+					"link": "nate-bixler.html",
+					"photo": "nate_bixler.jpg",
+					"name": "Nate Bixler",
+					"job_title": "Multifamily"
+				},
+				{
+					"link": "dan-elliot.html",
+					"photo": "dan_elliot.jpg",
+					"name": "Dan Elliot",
+					"job_title": "Shopping Centers"
+				},
+				{
+					"link": "dominic-sergi.html",
+					"photo": "dominic_sergi.jpg",
+					"name": "Dominic Sergi",
+					"job_title": "Industrial"
+				},
+				{
+					"link": "matthew-hoffer.html",
+					"photo": "matthew_hoffer.jpg",
+					"name": "Matthew Hoffer",
+					"job_title": "Office"
+				},
+				{
+					"link": "stacey-nadolny.html",
+					"photo": "stacey_nadolny.jpg",
+					"name": "Stacey Nadolny",
+					"job_title": "Hotel"
+				}		
+			]
+		}
+	]
+}

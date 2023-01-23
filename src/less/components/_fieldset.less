@@ -1,0 +1,44 @@
+.fieldset {
+	padding: 10px 20px 15px;
+	border: 1px solid #DBDADA;
+	border-radius: 10px;
+
+	&--invest {		
+    display: flex;
+    align-items: center;
+		margin: 0 -20px 29px;
+		padding-bottom: 5px;
+
+		@media @xl {
+			flex-direction: column;
+		}
+
+		@media @lg {
+			margin-top: 33px;
+		}
+
+		@media @sm {
+			margin: 33px -5px 0;
+			padding: 10px 5px 0;
+			border-width: 1px 0 0;
+			border-radius: 0;
+		}
+	}	
+
+	&__legend {
+		display: inline-block;
+		width: auto;
+		padding: 0 5px;
+		font-size: 18px;
+		line-height: 1.45;
+		font-weight: 500;
+		background-color: #fff;
+		transform: translateX(-5px);
+
+		.fieldset--invest & {	
+			@media @sm {
+				margin-left: 5px;
+			}
+		}
+	}
+}

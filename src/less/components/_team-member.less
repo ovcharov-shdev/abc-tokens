@@ -1,0 +1,168 @@
+.team-member {
+  display: inline-block;
+  color: @color-gray;
+  text-align: center;
+  text-decoration: none;
+
+  &--big {
+    margin-bottom: 47px;
+    @media @sm {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--medium {
+    margin-bottom: 52px;
+    @media @sm {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--small {
+    margin-bottom: 60px;
+    @media @sm {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media @md {
+    display: flex;
+    text-align: left;
+  }
+
+  &__wrapper {
+    @media @md {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__photo {
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border-radius: 200px;
+    transition: box-shadow 0.3s;
+
+    @media @md {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+
+    @media @sm {
+      width: 97px;
+      height: 97px;
+      margin-right: 16px;
+    }
+
+    .team-member:hover & {
+      box-shadow: 0 0 0 3px #66b2f1;
+    }
+
+    .team-member--big & {
+      width: 160px;
+      height: 160px;
+      margin-bottom: 23px;
+
+      @media @md {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 0;
+      }
+      @media @sm {
+        width: 97px;
+        height: 97px;
+      }
+    }
+
+    .team-member--big:hover & {
+      box-shadow: 0 0 0 4px #66b2f1;
+    }
+
+    .team-member--medium & {
+      margin-bottom: 18px;
+
+      @media @md {
+        margin-bottom: 0;
+      }
+    }
+
+    .team-member--small & {
+      margin-bottom: 12px;
+
+      @media @md {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__name {
+    margin-bottom: 9px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    transition: color 0.3s;
+
+    @media @sm {
+      font-size: 16px;
+      line-height: 23px;
+      font-weight: 500;
+    }
+
+    .team-member:hover & {
+      color: #66b2f1;
+    }
+
+    .team-member--big & {
+      margin-bottom: 4px;
+      font-weight: 500;
+
+      @media @sm {
+        margin-bottom: 7px;
+        font-size: 18px;
+      }
+    }
+
+    .team-member--medium & {
+      margin-bottom: 8px;
+    }
+
+    .team-member--small & {
+      margin-bottom: 1px;
+    }
+  }
+
+  &__job {
+    margin-bottom: 5px;
+    font-size: 21px;
+    line-height: 26px;
+    color: #66b2f1;
+    font-weight: 500;
+
+    @media @sm {
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+    .team-member--big & {
+      @media @sm {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__job-title {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #837f7f;
+
+    @media @sm {
+      font-size: 13px;
+      line-height: 19px;
+    }
+  }
+}

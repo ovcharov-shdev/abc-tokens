@@ -1,0 +1,64 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/button.html" import button %}
+{% from "templates/components/form-group.html" import formGroup %}
+{% from "templates/components/icon.html" import icon %}
+
+{% block page_title %}
+		My Profile
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem = 0, signedIn = true, cssClass='header--transparent-shadow') }}
+{% endblock %}
+{% block page_content %}
+		<section class="section section--invest">
+				<div class="container">
+					<header class="section__header">
+							<h1 class="section__title section__title_inline">My Profile</h1>
+							<a href="#" class="link-button" data-modal="logout">
+								{{ icon('out', 'link-button__icon') }}
+								<span class="link-button__text">Log Out</span>
+							</a>
+					</header>
+
+					<ul class="tabs tabs--invest tabs--xs">
+						<li class="tabs__item">
+								<a href="#" class="tabs__link tabs__link--active" data-row="1">Personal Info</a>
+						</li>
+						<li class="tabs__item">
+								<a href="#" class="tabs__link" data-row="2">Transaction History</a>
+						</li>
+						<li class="tabs__item">
+								<a href="#" class="tabs__link" data-row="3">Settings</a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="page-slider">
+					<li class="page-slider__item">
+						<div class="container">
+							{% include "./templates/partials/profile/personal-info.html" %}
+						</div>
+					</li>
+					<li class="page-slider__item">
+						<div class="container">
+							{% include "./templates/partials/profile/transaction-history.html" %}
+						</div>
+					</li>
+					<li class="page-slider__item">
+						<div class="container">
+							{% include "./templates/partials/profile/settings.html" %}
+						</div>
+					</li>
+				</ul>
+		</section>
+		{% include "templates/components/modals.html" %}
+		{% include "templates/partials/profile/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem = 0, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

@@ -1,0 +1,145 @@
+.footer {
+  padding-top: 56px;
+  padding-bottom: 39px;
+  background-color: @color-gray;
+  color: #fff;
+
+  @media @md {
+    padding-top: 32px;
+    padding-bottom: 19px;
+  }
+
+  &__top {
+    margin-bottom: 2px;
+
+    @media @md {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__col-info {
+    max-width: 100%/3;
+
+    @media @md {
+      max-width: 100%;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+  }
+
+  &__col-nav {
+    max-width: 100%/6;
+    padding-top: 20px;
+
+    @media @xl {
+      max-width: (100%/36) * 8;
+    }
+
+    @media @md {
+      max-width: 100%;
+      padding-top: 32px;
+      text-align: center;
+    }
+  }
+
+  &__logo-link {
+    display: inline-block;
+    margin-bottom: 17px;
+
+    @media @md {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__logo-image {
+    max-width: 100%;
+  }
+
+  &__addr {
+    margin-bottom: 28px;
+    font-weight: 500;
+    line-height: 28px;
+
+    @media @md {
+      font-size: 14px;
+    }
+  }
+
+  &__phone {
+    font-weight: 500;
+    line-height: 28px;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media @md {
+      font-size: 14px;
+    }
+  }
+
+  &__nav-list {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  &__nav-category {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 500;
+    color: @color-orange;
+  }
+
+  &__nav-elem {
+    margin-bottom: 21px;
+    list-style-type: none;
+  }
+
+  &__nav-link {
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+    text-decoration: none;
+
+    &--active {
+      color: #a6a3a3;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media @md {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+
+    br {
+      display: none;
+      @media @md {
+        display: block;
+      }
+    }
+
+    @media @md {
+      font-weight: 500;
+    }
+  }
+}

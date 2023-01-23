@@ -1,0 +1,65 @@
+.property-card {
+  display: block;
+  width: 108%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 16px rgba(#000, 0.02);
+  color: @color-gray;
+  text-decoration: none;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.2s;
+  transform: scale(0.94) translate(-4%, -4%);
+  transform-origin: 50% 50%;;
+
+  &:hover {
+    box-shadow: 0 1px 16px rgba(#000, 0.12);
+    transform: scale3d(1, 1, 1)  translate(-4%, -4%);
+    @media @md {
+      transform: none;
+    }
+  }
+
+  @media @md {
+    width: 100%;
+    transform: none;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    padding: 19px 19px 5px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+
+    @media @md {
+      margin-bottom: 5px;
+      font-size: 23px;
+    }
+
+    &--selected {
+      background-color: #f4d384;
+      border-radius: 3px;
+    }
+  }
+
+  &__profit {
+    margin-bottom: 19px;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 500;
+
+    @media @md {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+  }
+}

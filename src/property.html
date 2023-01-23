@@ -1,0 +1,116 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/button.html" import button %}
+{% from "templates/components/icon.html" import icon %}
+
+{% block page_title %}		
+	Back of Property Card page
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem=5) }}
+{% endblock %}
+{% block page_content %}
+		<section class="breadcrumbs">
+				<div class="container">
+						<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Home</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="portfolio.html">Our Properties</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<span class="breadcrumbs__current">Beekman Apartments</span></li>
+						</ul>
+				</div>
+		</section>
+		<section class="section section--property-page property-page">
+			<div class="container">
+				<div class="slider-wrapper">
+						<div class=" slider slider--property-page swiper-container">
+								<div class="slider__wrapper swiper-wrapper">
+										<div class="slider__slide swiper-slide" style="background-image: url('images/property/slide1.jpg')" data-bg="images/property/slide1.jpg" data-bgmobile="images/property/slide1_mobile.jpg"></div>
+										<div class="slider__slide swiper-slide" style="background-image: url('images/property/slide2.jpg')" data-bg="images/property/slide2.jpg" data-bgmobile="images/property/slide2_mobile.jpg"></div>
+								</div>
+						</div>						
+						<button class="slider__navbtn slider__next slider__next--property-page"></button>
+						<button class="slider__navbtn slider__prev slider__prev--property-page"></button>
+				</div>										
+				<div class="section__header">
+						<h1 class="section__title">Beekman Apartments</h1>
+				</div>
+				<div class="row">
+					<!-- Content -->
+					<div class="col col--property-page-content">
+						<div class="property-page__content">
+							<p class="property-page__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id amet tristique sed sem nullam ullamcorper commodo elementum, pretium. Dolor in cursus sit leo scelerisque iaculis sit pellentesque. Id nulla nisl venenatis integer tincidunt mauris elit imperdiet. Nisi, venenatis et suspendisse nunc lorem tincidunt. Vehicula feugiat eget adipiscing in nulla quam nisl mauris nisl. Massa phasellus nullam quam proin odio ultricies. Ipsum molestie ligula a tellus tristique mi.</p>
+							<p class="property-page__paragraph">Mauris ac ultricies nulla id sed. Arcu scelerisque egestas sit habitant nisl non euismod a. Aliquam sit neque id sed vestibulum proin. <a class="property-page__link" href="index.html">Pellentesque</a> pellentesque at nulla id sit. Magna congue quam purus vulputate congue porttitor nulla malesuada. Sed quis urna interdum viverra varius sit sapien pharetra nulla. Tortor diam, arcu sit auctor. Ut quam suspendisse amet et lacus sagittis, etiam. In tempus suspendisse egestas tristique dignissim a lobortis in congue. Urna, sagittis a augue velit est tellus. Eget urna pellentesque lectus bibendum adipiscing curabitur etiam lacus tristique. Aliquam, interdum nunc ut orci quis pellentesque nisi, at. <a class="property-page__link" href="index.html">Enim sapien</a>, consectetur lorem etiam neque integer velit.</p>
+							<p class="property-page__paragraph">Lacus pellentesque senectus euismod eget amet egestas porttitor aliquam. Senectus ultricies volutpat, purus velit eu leo rhoncus amet iaculis. Tempor eget nec pellentesque euismod. Eget mauris sed ac faucibus tellus, ac. Morbi lorem bibendum nisi, arcu sit tristique at vestibulum. Suspendisse faucibus habitant proin pellentesque. Egestas elit eget arcu dignissim posuere varius convallis.</p>
+							<div class="property-page__button-box">
+								{{ button(tag="a", href="invest.html", type="3d", text="Buy ABC Tokens", class="property-page__button") }}
+							</div>	
+							<div class="property-page__more-button-box">
+								<button class="property-page__more-button">More {{ icon('chevron-bold', 'property-page__more-button-icon') }}</button>
+							</div>						
+						</div>												
+					</div>
+					<!-- Info col -->
+					<div class="col col--property-page-info">
+						<h2 class="property-page__info-title">Property Overview</h2>	
+						<div class="property-table property-table--property-page">
+							<p class="property-table__row">
+								{{ icon('pie-chart', 'property-table__icon') }}
+								<span class="property-table__key">Units</span>
+								<span class="property-table__value">11</span>
+							</p>
+							<p class="property-table__row">
+								{{ icon('label', 'property-table__icon') }}
+								<span class="property-table__key">Purchase Price</span>
+								<span class="property-table__value">$35,000</span>
+							</p>
+							<p class="property-table__row">
+								{{ icon('resize', 'property-table__icon') }}
+								<span class="property-table__key">Square Feet</span>
+								<span class="property-table__value">252<span class="property-table__value--gray">ft<sup>2</sup></span></span>
+							</p>
+							<p class="property-table__row">
+								{{ icon('line-graph', 'property-table__icon') }}
+								<span class="property-table__key">Anticipated ROI</span>
+								<span class="property-table__value">13%</span>
+							</p>
+							<p class="property-table__row">
+								{{ icon('folder', 'property-table__icon') }}
+								<span class="property-table__key">Property Type</span>
+								<span class="property-table__value">Condominium Apartments </span>
+							</p>
+							<p class="property-table__row">
+								{{ icon('bar-graph', 'property-table__icon') }}
+								<span class="property-table__key">Residual Appreciation</span>
+								<span class="property-table__value property-table__value--wide">$112,480</span>
+							</p>
+						</div>
+						<div class="property-page__button-box property-page__button-box--mobile">
+								{{ button(tag="a", href="invest.html", type="3d", text="Buy ABC Tokens", class="property-page__button") }}
+							</div>			
+						<h2 class="property-page__info-title">Location</h2>							
+						<picture>
+							<source media="(max-width: 768px)" srcset="images/property/map_mobile.jpg">
+							<img class="property-page__map" src="images/property/map.jpg" alt="">
+						</picture>
+						<address class="property-address property-address--property-page">
+							{{ icon('map-marker', 'property-address__icon') }}Ohio, Cincinnati
+							<span class="property-address__note">Vehicula feugiat eget adipiscing</span>
+						</address>	
+					</div>
+				</div>				
+			</div>
+		</section>
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem=4, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

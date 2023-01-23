@@ -1,0 +1,140 @@
+<!-- Modal Personal data edit -->
+<div class="modal modal--personal-data">
+		<div class="modal__card">
+				<div class="modal__header">				
+					<button class="modal__close"></button>
+					<h2 class="modal__title">Personal Data</h2>
+				</div>
+				<div class="modal__body">
+					<form action="#" class="modal__form">
+						<div class="modal__row">
+								{{formGroup(id='pd-first-name',
+										labelText='First Name',
+										isRequired=true,
+										class="modal__form-group modal__col",
+										value="Samanta")
+								}}
+								{{formGroup(id='pd-last-name',
+										labelText='Last Name',
+										isRequired=true,
+										class="modal__form-group modal__col",
+										value="Smith")
+								}}
+						</div>
+								{{formGroup(id='pd-email',
+										inputType="email",
+										labelText='Email',
+										isRequired=true,
+										class="modal__form-group",
+										value="samtrix@hotmail.com")
+								}}								
+						<div class="modal__row">
+								{{formGroup(id='pd-phone',
+										inputType="tel",
+										labelText='Phone',
+										isRequired=true,
+										class="modal__form-group modal__col",
+										value="+1 (904) 129-21-09")
+								}}
+								{{formGroup(id='pd-birthday',
+										inputType="text",
+										labelText='Birthday',
+										isRequired=true,
+										class="modal__form-group modal__col form-group--date",
+										value="1996-01-26")
+								}}
+						</div>
+						{{formGroup(id='pd-address',
+								inputType='textarea',
+								labelText='Address',
+								value="2134  Mount Street, Munger \nMichigan, MI 48747 ")
+						}}
+						<div class="modal__submit-row">
+							{{ button(type="primary", text="Save", class="modal__submit", isSubmit=true)}}	
+						</div>
+				</form>
+				</div>
+		</div>
+</div>
+
+<!-- Modal Password edit -->
+<div class="modal modal--password-edit">
+		<div class="modal__card">
+				<div class="modal__header">				
+					<button class="modal__close"></button>
+					<h2 class="modal__title">Change Password</h2>
+				</div>
+				<div class="modal__body">
+					<form action="#" class="modal__form">
+						{{formGroup(id='pe-old-password',
+								inputType="password",
+								labelText='Old Password',
+								isRequired=true,
+								class="modal__form-group")
+						}}
+						{{formGroup(id='pe-password',
+								inputType="password",
+								labelText='New Password',
+								isRequired=true,
+								class="modal__form-group")
+						}}
+						{{formGroup(id='pe-password-confirm',
+								inputType="password",
+								labelText='Password Confirmation',
+								isRequired=true,
+								class="modal__form-group")
+						}}						
+						<div class="modal__submit-row">
+							{{ button(type="primary", text="Save", class="modal__submit", isSubmit=true)}}	
+						</div>
+				</form>
+				</div>
+		</div>
+</div>
+
+<!-- Modal Card data -->
+<div class="modal modal--card-data">
+		<div class="modal__card">
+				<div class="modal__header">				
+					<button class="modal__close"></button>
+					<h2 class="modal__title">Card Data</h2>
+				</div>
+				<div class="modal__body">
+					<form action="#" class="modal__form">
+						{{formGroup(id='cd-old-password',
+								inputType="text",
+								labelText='Card Number',
+								isRequired=true,
+								class="modal__form-group form-group--card",
+								value="4059 5416 5749 0793")
+						}}
+						{{formGroup(id='cd-holder',
+								labelText='Holder',
+								isRequired=true,
+								class="modal__form-group",
+								value="SAMANTA SMITH")
+						}}
+						<div class="modal__row">
+								{{formGroup(id='pd-exp-date',
+										inputType="text",
+										labelText='Expiration Date',
+										isRequired=true,
+										class="modal__form-group modal__col modal__col--date form-group--date",
+										value="2023-01-11")
+								}}
+								{{formGroup(id='cd-cvv',
+										inputType="password",
+										labelText='CVV',
+										isRequired=true,
+										class="modal__form-group modal__col modal__col--cvv",
+										attrString="maxlength=3",
+										value="000")
+								}}
+						</div>										
+						<div class="modal__submit-row">
+							{{ button(type="primary", text="Save", class="modal__submit", isSubmit=true)}}	
+						</div>
+				</form>
+				</div>
+		</div>
+</div>

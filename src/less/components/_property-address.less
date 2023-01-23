@@ -1,0 +1,50 @@
+.property-address {
+	position: relative;
+	padding-left: 23px;
+	margin-bottom: 10px;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.35;
+	color: #f49d87;	
+
+	&--property-page {
+		margin-left: 5px;
+		padding-left: 34px;
+		font-size: 21px;
+
+		@media @md {
+			padding-left: 0;
+			text-align: center;
+		}
+	}
+
+	&--property-card {
+		margin-bottom: 13px;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: auto;
+
+		.property-address--property-page & {
+			width: 27px;
+
+			@media @md {
+				position: static;
+				display: inline-block;
+				width: 24px;
+				margin-right: 5px;
+				transform: translateY(2px);
+			}
+		}
+	}
+
+	&__note {
+		display: block;
+		font-size: 16px;
+		line-height: 1.35;
+		color: #837F7F;
+	}
+}

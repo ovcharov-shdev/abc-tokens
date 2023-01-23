@@ -1,0 +1,76 @@
+{
+	"footer_menu": [
+		{
+			"category": "Resources",
+			"list": [
+				{
+					"text": "Home",
+					"link": "index.html"
+				},
+				{
+					"text": "Invest",
+					"link": "invest.html"
+				},
+				{
+					"text": "About",
+					"link": "about.html"
+				},
+				{
+					"text": "Portfolio",
+					"link": "portfolio.html"
+				},
+				{
+					"text": "EDGAR",
+					"link": "https://google.com",
+					"target_blank": true
+				}
+			]
+		},
+		{
+			"category": "Overview",
+			"list": [
+				{
+					"text": "Product",
+					"link": "#about"
+				},
+				{
+					"text": "Concept",
+					"link": "#how-work"
+				},
+				{
+					"text": "Why?",
+					"link": "#why-blockchain"
+				},
+				{
+					"text": "Mission",
+					"link": "#reviews"
+				},
+				{
+					"text": "Raise Cap",
+					"link": "#statistics"
+				},
+				{
+					"text": "Contact Us",
+					"link": "#contacts-form"
+				}
+			]
+		},
+		{
+			"category": "Support",
+			"list": [
+				{
+					"text": "Terms of Use",
+					"link": "index.html"
+				},
+				{
+					"text": "Privacy",
+					"link": "index.html"
+				},
+				{
+					"text": "Cookie Settings",
+					"link": "index.html"
+				}
+			]
+		}
+	]
+}

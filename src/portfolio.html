@@ -1,0 +1,203 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/icon.html" import icon %}
+
+{% block page_title %}		
+	Portfolio page
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem=5) }}
+{% endblock %}
+{% block page_content %}
+		<section class="section section--protfolio-page">
+			<div class="container">
+				<div class="section__header">
+						<h1 class="section__title">Our Properties</h1>
+				</div>
+				<div class="search-form">
+					<form action="#" class="search-form__form">
+						{{ icon('search', 'search-form__icon') }}
+						<input class="search-form__input" type="search" placeholder="Search">
+					</form>
+				</div>
+				<div class="row row--portfolio-page">
+					<!-- col -->
+					<div class="col col--property-card">
+						<a href="property.html" class="property-card">
+							<img class="property-card__image" src="images/portfolio/building1.jpg" alt="">
+							<div class="property-card__content">
+								<h2 class="property-card__title">Beekman Apartments</h2>
+								<address class="property-address property-address--property-card">{{ icon('map-marker', 'property-address__icon') }}Ohio, Cincinnati</address>
+								<p class="property-card__profit">13% IRR Over 10 years</p>
+								<div class="property-table">
+									<p class="property-table__row">
+										{{ icon('pie-chart', 'property-table__icon') }}
+										<span class="property-table__key">Units</span>
+										<span class="property-table__value">11</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('label', 'property-table__icon') }}
+										<span class="property-table__key">Purchase Price</span>
+										<span class="property-table__value">$35,000</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('line-graph', 'property-table__icon') }}
+										<span class="property-table__key">Anticipated ROI</span>
+										<span class="property-table__value">13%</span>
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- col -->
+					<div class="col col--property-card">
+						<a href="property.html" class="property-card">
+							<img class="property-card__image" src="images/portfolio/building2.jpg" alt="">
+							<div class="property-card__content">
+								<h2 class="property-card__title">Main Street Residences</h2>
+								<address class="property-address property-address--property-card">{{ icon('map-marker', 'property-address__icon') }}Ohio, Cincinnati</address>
+								<p class="property-card__profit">11% IRR Over 5 years</p>
+								<div class="property-table">
+									<p class="property-table__row">
+										{{ icon('pie-chart', 'property-table__icon') }}
+										<span class="property-table__key">Units</span>
+										<span class="property-table__value">2</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('label', 'property-table__icon') }}
+										<span class="property-table__key">Purchase Price</span>
+										<span class="property-table__value">$15,000</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('line-graph', 'property-table__icon') }}
+										<span class="property-table__key">Anticipated ROI</span>
+										<span class="property-table__value">17%</span>
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- col -->
+					<div class="col col--property-card">
+						<a href="property.html" class="property-card">
+							<img class="property-card__image" src="images/portfolio/building3.jpg" alt="">
+							<div class="property-card__content">
+								<h2 class="property-card__title">The Villages at Lake Reba</h2>
+								<address class="property-address property-address--property-card">{{ icon('map-marker', 'property-address__icon') }}Ohio, Cincinnati</address>
+								<p class="property-card__profit">9% IRR Over 2 years</p>
+								<div class="property-table">
+									<p class="property-table__row">
+										{{ icon('pie-chart', 'property-table__icon') }}
+										<span class="property-table__key">Units</span>
+										<span class="property-table__value">7</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('label', 'property-table__icon') }}
+										<span class="property-table__key">Purchase Price</span>
+										<span class="property-table__value">$135,000</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('line-graph', 'property-table__icon') }}
+										<span class="property-table__key">Anticipated ROI</span>
+										<span class="property-table__value">21%</span>
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- col -->
+					<div class="col col--property-card">
+						<a href="property.html" class="property-card">
+							<img class="property-card__image" src="images/portfolio/building4.jpg" alt="">
+							<div class="property-card__content">
+								<h2 class="property-card__title">Beekman Apartments</h2>
+								<address class="property-address property-address--property-card">{{ icon('map-marker', 'property-address__icon') }}Ohio, Cincinnati</address>
+								<p class="property-card__profit">13% IRR Over 10 years</p>
+								<div class="property-table">
+									<p class="property-table__row">
+										{{ icon('pie-chart', 'property-table__icon') }}
+										<span class="property-table__key">Units</span>
+										<span class="property-table__value">11</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('label', 'property-table__icon') }}
+										<span class="property-table__key">Purchase Price</span>
+										<span class="property-table__value">$35,000</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('line-graph', 'property-table__icon') }}
+										<span class="property-table__key">Anticipated ROI</span>
+										<span class="property-table__value">13%</span>
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- col -->
+					<div class="col col--property-card">
+						<a href="property.html" class="property-card">
+							<img class="property-card__image" src="images/portfolio/building5.jpg" alt="">
+							<div class="property-card__content">
+								<h2 class="property-card__title">Main Street Residences</h2>
+								<address class="property-address property-address--property-card">{{ icon('map-marker', 'property-address__icon') }}Ohio, Cincinnati</address>
+								<p class="property-card__profit">11% IRR Over 5 years</p>
+								<div class="property-table">
+									<p class="property-table__row">
+										{{ icon('pie-chart', 'property-table__icon') }}
+										<span class="property-table__key">Units</span>
+										<span class="property-table__value">2</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('label', 'property-table__icon') }}
+										<span class="property-table__key">Purchase Price</span>
+										<span class="property-table__value">$15,000</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('line-graph', 'property-table__icon') }}
+										<span class="property-table__key">Anticipated ROI</span>
+										<span class="property-table__value">17%</span>
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- col -->
+					<div class="col col--property-card">
+						<a href="property.html" class="property-card">
+							<img class="property-card__image" src="images/portfolio/building6.jpg" alt="">
+							<div class="property-card__content">
+								<h2 class="property-card__title">The Villages at Lake Reba</h2>
+								<address class="property-address property-address--property-card">{{ icon('map-marker', 'property-address__icon') }}Ohio, Cincinnati</address>
+								<p class="property-card__profit">9% IRR Over 2 years</p>
+								<div class="property-table">
+									<p class="property-table__row">
+										{{ icon('pie-chart', 'property-table__icon') }}
+										<span class="property-table__key">Units</span>
+										<span class="property-table__value">7</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('label', 'property-table__icon') }}
+										<span class="property-table__key">Purchase Price</span>
+										<span class="property-table__value">$135,000</span>
+									</p>
+									<p class="property-table__row">
+										{{ icon('line-graph', 'property-table__icon') }}
+										<span class="property-table__key">Anticipated ROI</span>
+										<span class="property-table__value">21%</span>
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>				
+				</div>
+			</div>
+		</section>
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem=4, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

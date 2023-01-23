@@ -1,0 +1,48 @@
+
+{% from "templates/components/button.html" import button %}
+
+<!-- Modal login -->
+<div class="modal modal--login">
+		<div class="modal__card">
+				<div class="modal__header">
+						<button class="modal__close"></button>
+						<div class="modal--login__tabs-wrapper">
+							<ul class="modal--login__tabs">
+									<li class="modal--login__tab">
+											<a href="#" class="modal--login__tab-link modal--login__tab-link--active" data-form="login">Login</a>
+									</li>
+									<li class="modal--login__tab">
+											<a href="#" class="modal--login__tab-link" data-form="register">Registration</a>
+									</li>
+									<li class="modal--login__tab">
+											<a href="#" class="modal--login__tab-link" data-form="restore-email">Account restore</a>
+									</li>
+							</ul>
+						</div>								
+				</div>
+				<div class="modal__body">
+						<div class="modal--login__forms">
+								{% include "templates/components/form-login.html" %}									
+								{% include "templates/components/form-register.html" %}	
+								{% include "templates/components/form-restore-email.html" %}
+								{% include "templates/components/form-restore-password.html" %}
+						</div>
+				</div>
+		</div>
+</div>
+
+<!-- Modal logout -->
+<div class="modal modal--logout modal-logout">
+		<div class="modal__card">
+				<div class="modal__header">
+						<button class="modal__close"></button>													
+				</div>
+				<div class="modal__body">
+						<p class="modal-logout__title">Are you sure you want to log out?</p>
+						<div class="modal-logout__button-box">
+							{{ button(text="Log out", class="modal-logout__button js-logout")}}
+							{{ button(type="outline", text="Cancel", class="modal-logout__button js-modal-close")}}
+						</div>
+				</div>
+		</div>
+</div>

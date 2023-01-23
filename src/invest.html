@@ -1,0 +1,66 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/button.html" import button %}
+{% from "templates/components/form-group.html" import formGroup %}
+
+{% block page_title %}
+		Invest page
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem = 3, cssClass='header--transparent-shadow') }}
+{% endblock %}
+{% block page_content %}
+		<section class="section section--invest">
+				<div class="container">
+						<div class="section__header">
+								<h1 class="section__title">Invest</h1>
+						</div>
+						<div class="block-invest block-invest--buy-mode">
+								<ul class="tabs tabs--invest">
+										<li class="tabs__item">
+												<a href="#" class="tabs__link tabs__link--active" data-row="buy">Buy ABC Tokens</a>
+										</li>
+										<li class="tabs__item">
+												<a href="#" class="tabs__link" data-row="sell">Sell ABC TOKENS</a>
+										</li>
+								</ul>
+								<div class="page-slider">
+										<div class="page-slider__item">
+												<div class="row block-invest__form-row block-invest__form-row--buy block-invest__form-row--step1">
+														<div class="col block-invest__form-col">
+																{% include "templates/components/invest-form-buy.html" %}
+														</div>
+														<div class="col block-invest__result-col">
+																{% include "templates/components/order-preview-buy.html" %}
+														</div>
+														<div class="col block-invest__success-col">
+																{% include "templates/components/order-success.html" %}
+														</div>
+												</div>
+										</div>
+										<div class="page-slider__item">
+												<div class="row block-invest__form-row block-invest__form-row--sell block-invest__form-row--step1">
+														<div class="col block-invest__form-col">
+																{% include "templates/components/invest-form-sell.html" %}
+														</div>
+														<div class="col block-invest__result-col">
+																{% include "templates/components/order-preview-sell.html" %}
+														</div>
+														<div class="col block-invest__success-col">
+																{% include "templates/components/order-success.html" %}
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem = 2, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

@@ -1,0 +1,61 @@
+.team-department {
+	margin: 0 auto 46px;
+
+	@media @sm {
+		margin-bottom: 16px;
+	}
+
+	&--big {
+		max-width: 1084px;
+
+		@media @md {
+			max-width: 400px;
+		}
+
+    @media @sm {
+      max-width: 300px;
+    }
+	}
+
+	&--medium {
+		max-width: 1000px;
+
+		@media @md {
+			max-width: 400px;
+		}
+
+    @media @sm {
+      max-width: 300px;
+    }
+	}
+
+	&--small {
+		max-width: 924px;
+
+		@media @md {
+			max-width: 400px;
+		}
+
+    @media @sm {
+      max-width: 300px;
+    }
+	}
+
+  &__title {
+		margin-bottom: 35px;
+    font-size: 30px;
+    line-height: 46px;
+    font-weight: 600;
+		color: @color-blue;
+		text-align: center;		
+
+		@media @md {
+			font-size: 23px;
+		}
+
+		@media @sm {
+			margin-bottom: 15px;
+			font-size: 18px;
+		}
+  }
+}

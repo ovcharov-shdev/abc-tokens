@@ -1,0 +1,50 @@
+{
+	"main_menu": [
+		{
+			"title": "Home",
+			"link": "index.html"
+		},
+		{
+			"title": "Overview",
+			"parent": true,
+			"subMenu": [
+				{
+					"title": "Product",
+					"link": "#about"
+				},
+				{
+					"title": "Concept",
+					"link": "#how-work"
+				},
+				{
+					"title": "Why?",
+					"link": "#why-blockchain"
+				},
+				{
+					"title": "Mission",
+					"link": "#reviews"
+				},
+				{
+					"title": "Raise Cap",
+					"link": "#statistics"
+				},
+				{
+					"title": "Contact Us",
+					"link": "#contacts-form"
+				}
+			]
+		},
+		{
+			"title": "Invest",
+			"link": "invest.html"
+		},
+		{
+			"title": "About",
+			"link": "about.html"
+		},
+		{
+			"title": "Portfolio",
+			"link": "portfolio.html"
+		}
+	]
+}

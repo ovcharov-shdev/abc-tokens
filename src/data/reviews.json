@@ -1,0 +1,58 @@
+{
+	"reviews": [
+		{
+			"photo": "review_photo1.jpg",
+			"name": "Adrian Kolody",
+			"job": "CEO of FerroSync Technologies Inc",
+			"text": "More and more is moving to the clockchain, the next step is adding a crypto REIT on Ethereum"
+		},
+		{
+			"photo": "review_photo2.jpg",
+			"name": "Artur Klaren",
+			"job": "CEO of Cryptec Inc",
+			"text": "Adipiscing posuere donec magna congue adipiscing potenti pellentesque. Proin eget condimentum gravida cras pulvinar sodales morbi."
+		},
+		{
+			"photo": "review_photo3.jpg",
+			"name": "Max Winner",
+			"job": "CEO of Clicks",
+			"text": "Gravida risus scelerisque et amet vulputate. Ac augue non lacus urna volutpat eleifend in bibendum."
+		},
+		{
+			"photo": "review_photo1.jpg",
+			"name": "Adrian Kolody",
+			"job": "CEO of FerroSync Technologies Inc",
+			"text": "More and more is moving to the clockchain, the next step is adding a crypto REIT on Ethereum"
+		},
+		{
+			"photo": "review_photo2.jpg",
+			"name": "Artur Klaren",
+			"job": "CEO of Cryptec Inc",
+			"text": "Adipiscing posuere donec magna congue adipiscing potenti pellentesque. Proin eget condimentum gravida cras pulvinar sodales morbi."
+		},
+		{
+			"photo": "review_photo3.jpg",
+			"name": "Max Winner",
+			"job": "CEO of Clicks",
+			"text": "Gravida risus scelerisque et amet vulputate. Ac augue non lacus urna volutpat eleifend in bibendum."
+		},
+		{
+			"photo": "review_photo1.jpg",
+			"name": "Adrian Kolody",
+			"job": "CEO of FerroSync Technologies Inc",
+			"text": "More and more is moving to the clockchain, the next step is adding a crypto REIT on Ethereum"
+		},
+		{
+			"photo": "review_photo2.jpg",
+			"name": "Artur Klaren",
+			"job": "CEO of Cryptec Inc",
+			"text": "Adipiscing posuere donec magna congue adipiscing potenti pellentesque. Proin eget condimentum gravida cras pulvinar sodales morbi."
+		},
+		{
+			"photo": "review_photo3.jpg",
+			"name": "Max Winner",
+			"job": "CEO of Clicks",
+			"text": "Gravida risus scelerisque et amet vulputate. Ac augue non lacus urna volutpat eleifend in bibendum."
+		}
+	]
+}

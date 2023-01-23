@@ -1,0 +1,298 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/button.html" import button %}
+{% from "templates/components/form-group.html" import formGroup %}
+
+{% block page_title %}
+		Home page
+{% endblock %}
+
+{% block page_header %}
+		{{ header(isTransparent=true, data=main_menu) }}
+{% endblock %}
+{% block page_content %}
+		<section  class="section section--promo">				
+				<a class="section__anchor" name="promo" id="promo"></a>
+				<div class="container container--promo">
+						<p class="section__title">Giving everyone access to high performing, diversified commercial real estate investments</p>
+						<div class="section__button-box">
+								{{ button(tag="a", href="invest.html", type="3d", text="Invest", class="section__button") }}
+								{{ button(tag="a", href="about.html", type="outline", text="About", class="section__button") }}
+						</div>
+				</div>
+		</section>
+		<section class="section section--about">				
+				<a class="section__anchor" name="about" id="about"></a>
+				<div class="container">
+						<div class="row row--about">
+								<div class="col col--about section__about-image-box">
+										<img class="section__about-image" src="images/index/about_img.jpg" alt="">
+								</div>
+								<div class="col col--about section__about-text">
+										<p class="text">
+												<strong class="text__blue">ABC</strong>
+												offers fractionalized interest in their cutting edge commercial real estate fund through a digital asset called a
+												<strong class="text__blue">security token</strong>. By using digital ledger technology												
+												<span class="tooltip tooltip--to-top tooltip--to-right">
+														<span class="tooltip__title">DLT</span>	
+														<span class="tooltip__popup-wrapper">												
+															<span class="tooltip__popup">
+																	<span class="tooltip__text">
+																			Distributed ledger technology (DLT) – is a consensus of replicated, shared, and synchronized digital data geographically spread across multiple sites, countries, or institutions. Unlike with a distributed database, there is no central administrator.
+																	</span>																
+															</span>
+															<svg version="1.1" class="tooltip__corner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 33.5 22.8" xml:space="preserve">
+																	<path class="tooltip__corner-path" d="M33.5,0.5c-1.2,0-2.4,0.3-3.4,1c-3.7,2.5-13.6,10-19.1,20.1c-0.2,0.3-0.4,0.6-0.6,0.7c-0.1,0-0.1,0-0.1,0
+																	c0,0,0,0-0.1-0.1c-0.3-0.5-0.7-1.4-1-2.6c-0.3-1.2-0.7-2.6-1-4.1C7.5,12.4,6.9,9,6.5,6.2C6,2.9,3.3,0.5,0,0.5H33.5z"/>
+															</svg>														
+														</span>	
+												</span>
+												on Ethereum’s well-known and trusted network, our tokenized commercial
+												<strong class="text__blue">real estate fund has all the benefits</strong>
+												of investing in commercial real estate without the pitfalls, i.e. high administrative costs, lack of transparency, and illiquidity.
+										</p>
+								</div>
+						</div>
+				</div>
+		</section>
+		<section class="section section--how-work">
+				<a class="section__anchor" name="how-work" id="how-work"></a>
+				<div class="container">
+						<div class="section__header">
+								<h2 class="section__title">How Does It Work?</h2>
+								<p class="section__subtitle">Example of a $100,000 Loan With a
+										<span class="tooltip section__tooltip">
+												<span class="tooltip__title tooltip__title--how-work">11%</span>
+												<span class="tooltip__popup-wrapper">
+													<span class="tooltip__popup">
+															<span class="tooltip__text">
+																	<span class="tooltip__text--strong">11%</span> is an average profit indicator for our projects.
+																	<br> You can see more detailed information on our projects in the
+																	<a class="tooltip__link" href="#">Portfolio</a>
+															</span>														
+													</span>
+													<svg version="1.1" class="tooltip__corner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 33.5 22.8" xml:space="preserve">
+															<path class="tooltip__corner-path" d="M33.5,0.5c-1.2,0-2.4,0.3-3.4,1c-3.7,2.5-13.6,10-19.1,20.1c-0.2,0.3-0.4,0.6-0.6,0.7c-0.1,0-0.1,0-0.1,0
+															c0,0,0,0-0.1-0.1c-0.3-0.5-0.7-1.4-1-2.6c-0.3-1.2-0.7-2.6-1-4.1C7.5,12.4,6.9,9,6.5,6.2C6,2.9,3.3,0.5,0,0.5H33.5z"/>
+													</svg>
+												</span>
+										</span>
+										Return
+								</p>
+						</div>
+						<div class="section__image-wrapper">
+								<img class="section__banner section__banner--desktop" src="images/index/how_work_img.svg" alt="How Does It Work?">
+								<img class="section__banner section__banner--mobile" src="images/index/how_work_img_mobile.svg" alt="How Does It Work?">
+						</div>
+				</div>
+		</section>
+		<section class="section section--why-blockchain">
+				<a class="section__anchor" name="why-blockchain" id="why-blockchain"></a>
+				<div class="container">
+						<div class="section__header">
+								<h2 class="section__title">Why Blockchain?</h2>
+						</div>
+						<div class="row">
+								<div class="col col--why-blockchain">
+										<figure class="card">
+												<img src="images/index/advantage_img1.jpg" alt="" class="card__img">
+												<figcaption>
+														<p class="card__text">
+																<span class="card__title">Fractionalization</span>
+																— Using blockchain technology, real estate investors can now gain access
+																to a wide variety of commercial property investments using tokens as a means of fractionalizing
+																the equity of the fund. This lowers the capital floor necessary to invest.
+														</p>
+												</figcaption>
+										</figure>
+								</div>
+								<div class="col col--why-blockchain">
+										<figure class="card">
+												<img src="images/index/advantage_img2.jpg" alt="" class="card__img">
+												<figcaption>
+														<p class="card__text">
+																<span class="card__title">Illiquidity</span>
+																— Commercial real estate is notoriously illiquid.
+																By creating a crypto REIT and
+																a secondary market for our security tokens, investors now have a quick and easy way of divesting.
+														</p>
+												</figcaption>
+										</figure>
+								</div>
+								<div class="col col--why-blockchain">
+										<figure class="card">
+												<img src="images/index/advantage_img3.jpg" alt="" class="card__img">
+												<figcaption>
+														<p class="card__text">
+																<span class="card__title">Real Estate/Crypto Hedge</span>
+																— As cryptocurrency continues
+																to further legitimize itself
+																as an asset class, giving investors the choice to liquidate their position from ABC and into crypto or dollars adds greater liquidity
+																to the market.
+														</p>
+												</figcaption>
+										</figure>
+								</div>
+						</div>
+				</div>
+		</section>
+		<section class="section section--reviews">				
+				<a class="section__anchor" name="reviews" id="reviews"></a>
+				<div class="container">
+						<p class="text text--reviews">
+								<strong class="text__blue text__blue--reviews">ABC</strong>
+								fintech offers its investors fractional interest in a well-balanced commercial real estate fund, using blockchain technology and security tokens to bring users a first class experience, with an emphasis on transparency, liquidity, and security.
+						</p>
+						<div class="slider-wrapper">
+								<div class="section__slider slider swiper-container">
+										<div class="swiper-wrapper">
+												{% for review in reviews %}
+														{% if loop.index == 1 or loop.index % 3 == 1 %}
+																<div class="section__slide swiper-slide">
+																{% endif %}
+																<div class="section__review review">
+																		<div class="review__top">
+																				<div class="review__photo-wrapper">
+																						<img class="review__photo" src="images/index/{{review.photo}}" alt="">
+																				</div>
+																				<div class="wrapper">
+																						<p class="review__name">{{review.name}}</p>
+																						<p class="review__job">{{review.job}}</p>
+																				</div>
+																		</div>
+																		<p class="review__text">{{review.text}}</p>
+																</div>
+																{% if loop.index % 3 == 0 or loop.index == reviews.length %}
+																</div>
+														{% endif %}
+												{% endfor %}
+										</div>
+								</div>
+								<div class="section__pagination slider__pagination"></div>
+								<div class="slider__navigation">
+										<button class="section__next slider__navbtn slider__next"></button>
+										<button class="section__prev slider__navbtn slider__prev"></button>
+								</div>
+						</div>
+				</div>
+		</section>
+		<section class="section section--statistic">				
+				<a class="section__anchor" name="statistics" id="statistics"></a>
+				<div class="container">
+						<div class="section__header">
+								<h2 class="section__title">Raise Your Capital</h2>
+						</div>
+						<div class="row row--statistic">
+								<div class="col col--statistic">
+										<div class="statistic-card statistic-card--sales">
+												<div class="statistic-card--sales__row row">
+														<div class="statistic-card--sales__col col">
+																<span class="statistic-card__label">Sold</span>
+																<div class="statistic-card__text">834,620</div>
+														</div>
+														<div class="statistic-card--sales__col col">
+																<span class="statistic-card__label">Available</span>
+																<div class="statistic-card__text">4,852,444</div>
+														</div>
+												</div>
+												<div class="statistic-card--sales__range-body"></div>
+												<div class="statistic-card__text statistic-card--sales__range-data">
+														<span class="statistic-card--sales__range-marker">17,2%</span>
+														<span class="statistic-card__label">Sold</span>
+												</div>
+
+										</div>
+								</div>
+								<div class="col col--statistic">
+										<div class="statistic-card statistic-card--rate">
+												<div class="statistic-card--rate__price-block">
+														<span class="statistic-card__label">Price</span>
+														<div class="statistic-card__text">
+																25,892
+																<span class="statistic-card__label statistic-card__label--gray">ETH</span>
+																= 1
+																<span class="statistic-card__label">ABC</span></div>
+												</div>
+												<div class="statistic-card--rate__curency-block">
+														<span class="statistic-card__label statistic-card--rate__curency-block__label">We Accept</span>
+														<div class="statistic-card--rate__curency-row">
+																<div class="curency statistic-card--rate__curency">
+																		<img class="statistic-card--rate__curency__logo curency__logo" src="images/curency/btc.svg" alt="BTC">
+																		<p class="statistic-card--rate__curency__name curency__name">BTC</p>
+																</div>
+																<div class="curency statistic-card--rate__curency statistic-card--rate__curency--active">
+																		<img class="statistic-card--rate__curency__logo curency__logo" src="images/curency/eth.svg" alt="ETH">
+																		<p class="statistic-card--rate__curency__name curency__name">ETH</p>
+																</div>
+																<div class="curency statistic-card--rate__curency">
+																		<img class="statistic-card--rate__curency__logo curency__logo" src="images/curency/dai.svg" alt="DAI">
+																		<p class="statistic-card--rate__curency__name curency__name">DAI</p>
+																</div>
+																<div class="curency statistic-card--rate__curency">
+																		<img class="statistic-card--rate__curency__logo curency__logo" src="images/curency/usd.svg" alt="USD">
+																		<p class="statistic-card--rate__curency__name curency__name">USD</p>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						<div class="section__button-wrapper">
+								{{ button(tag="a", href="invest.html", type="3d", text="Buy ABC Tokens", class="section__button section__button--statistic") }}
+						</div>
+				</div>
+		</section>
+		<section class="section section--contacts-form">				
+				<a class="section__anchor" name="contacts-form" id="contacts-form"></a>
+				<div class="container">
+						<div class="section__header">
+								<h2 class="section__title">Contact OUR TEAM</h2>
+						</div>
+						<form action="#" class="section--contact-form__form contacts-form">
+								<div class="contacts-form__row">
+										{{formGroup(id='name',
+														labelText='Name',
+														isRequired=true)
+										}}
+								</div>
+								<div class="contacts-form__row row">
+										<div class="contacts-form__col col">
+												{{formGroup(id='phone',
+																inputType='tel',
+																labelText='Phone',
+																value='+7 (904) 429-21-09',
+																placeholderText='+7 (000) 000-00-00',
+																isRequired=true)
+												}}
+										</div>
+										<div class="contacts-form__col col">
+												{{formGroup(id='email',
+																inputType='email',
+																labelText='Email',
+																errorText='Wrong Email',
+																value='mike-vazovsky@hotmail',
+																placeholderText='yourmail@mail.com',
+																isError=true,
+																isRequired=true)
+												}}
+										</div>
+								</div>
+								<div class="contacts-form__row">
+										{{formGroup(id='message',
+													inputType='textarea',
+													labelText='Message',
+													isRequired='true')
+									}}
+								</div>
+								{{ button(type="3d", text="Send", isSubmit=true, class="contacts-form__submit") }}
+						</form>
+				</div>
+		</section>
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem = 1, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

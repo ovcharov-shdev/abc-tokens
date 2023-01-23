@@ -1,0 +1,106 @@
+<form class="form invest-form" action="#">
+		<p class="invest-form__text block-invest__text">Few words shortly explain the buying process. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor sed eget laoreet arcu, sem potenti.</p>
+		<div class="invest-form__top row">
+				<div class="invest-form__amount-col col">
+						<div class="form-group form-group--required form-group--show-label js-step-disable form-group--invest form-group--curency">				
+								<div class="form-group__wrapper">										
+												<label for="invest-buy-amount" class="form-group__label">Investment Amount</label>
+												<input type="text" id="invest-buy-amount" class="form-group__input" value="100" required>
+												<div class="curency form-group__curency block-invest__curency">
+														<img class="curency__logo" src="images/curency/btc.svg" alt="BTC">
+														<p class="curency__name">BTC</p>
+												</div>
+												<span class="form-group__after">Maximum amount $ 50,000</span>														
+								</div>
+						</div>
+				</div>
+				<div class="invest-form__curency-col block-invest__curency-col col">
+						<div class="select select--curency select--required js-step-disable">
+								<input type="hidden" class="select__value" value="BTC">
+								<p class="select__label">Currency</p>
+								<div class="select__wrapper">
+										<div class="select__current">
+												<div class="curency">
+														<img class="curency__logo" src="images/curency/btc.svg" alt="BTC">
+														<p class="curency__name">BTC</p>
+												</div>
+										</div>
+										<ul class="select__list">
+												<li class="select__option" data-value="USD">
+														<div class="curency">
+																<img class="curency__logo" src="images/curency/usd.svg" alt="USD">
+																<p class="curency__name">USD</p>
+														</div>
+												</li>
+												<li class="select__option" data-value="BTC">
+														<div class="curency">
+																<img class="curency__logo" src="images/curency/btc.svg" alt="BTC">
+																<p class="curency__name">BTC</p>
+														</div>
+												</li>
+												<li class="select__option" data-value="DAI">
+														<div class="curency">
+																<img class="curency__logo" src="images/curency/dai.svg" alt="DAI">
+																<p class="curency__name">DAI</p>
+														</div>
+												</li>
+												<li class="select__option" data-value="ETH">
+														<div class="curency">
+																<img class="curency__logo" src="images/curency/eth__green.svg" alt="ETH">
+																<p class="curency__name">ETH</p>
+														</div>
+												</li>
+										</ul>
+								</div>
+						</div>
+				</div>
+		</div>
+		<fieldset class="fieldset fieldset--invest block-invest__fieldset">
+				<legend class="fieldset__legend">Balance calculator</legend>
+				{{formGroup(id='invest-buy-current-balance',
+						inputType="text",
+						labelText='Current ABC Balance',
+						isDisabled=true,
+						value="0.1882010929",
+						class="form-group--invest")
+				}}
+				<span class="invest-form__sign">+</span>
+				{{formGroup(id='invest-buy-top-amount',
+						inputType="text",
+						labelText='Top-up Amount',
+						isDisabled=true,
+						value="0.002312",
+						afterText="$100 = 0.002312 ABC",
+						class="form-group--invest")
+				}}
+				<span class="invest-form__sign">=</span>
+				{{formGroup(id='invest-buy-balance-after-deal',
+						inputType="text",
+						labelText='ABC Balace after the deal',
+						isDisabled=true,
+						value="0.1882013241",
+						class="form-group--invest")
+				}}
+		</fieldset>
+		<div class="invest-form__card">
+				<div class="select select--required js-step-disable">
+						<input type="hidden" class="select__value" value="card0">
+						<p class="select__label">Pay with card</p>
+						<div class="select__wrapper">
+								<p class="select__current">VISA **** **** **** 0739</p>
+								<ul class="select__list">
+										<li class="select__option select__option--selected" data-value="card0">VISA **** **** **** 0739</li>
+										<li class="select__option" data-value="card1">VISA **** **** **** 0239</li>
+										<li class="select__option" data-value="card2">VISA **** **** **** 0339</li>
+										<li class="select__option" data-value="card3">VISA **** **** **** 0459</li>
+										<li class="select__option" data-value="card4">VISA **** **** **** 0678</li>
+								</ul>
+						</div>
+				</div>
+		</div>
+		<div class="invest-form__button-box">
+				{{ button(type="3d", text="Checkout", class="invest-form__button block-invest__button block-invest__button--step1 js-step-button", attrString="data-step=step2")}}
+				{{ button(type="outline", text="Edit", class="invest-form__button block-invest__button block-invest__button--step2 js-step-button", attrString="data-step=step1")}}
+				{{ button(type="outline", text="Repeat", class="invest-form__button block-invest__button block-invest__button--step3 js-step-button", attrString="data-step=step1")}}
+		</div>
+</form>

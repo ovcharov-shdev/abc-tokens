@@ -1,0 +1,12 @@
+{% from "templates/components/team-member.html" import teamMember %}
+
+{% macro teamDepartment(data) %}
+	<div class="team-department team-department--{{data.block_size}}">
+		<h2 class="team-department__title">{{data.department}}</h2>
+		<div class="row row--team-department">
+			{% for member in data.member_list %}
+				{{teamMember(link=member.link, photo=member.photo, blockSize=data.block_size, name=member.name, job=member.job, jobTitle=member.job_title)}}
+			{% endfor %}
+		</div>
+	</div>
+{% endmacro %}

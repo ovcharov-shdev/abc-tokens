@@ -1,0 +1,95 @@
+.data-cell {
+	@media @lg {
+		position: relative;
+		padding: 65px 16px 76px;
+	}
+
+	&__datetime { // .data-cell__datetime
+		@media @lg {
+			position: absolute;
+			bottom: 22px;
+			right: 16px;
+		}
+	}
+
+	&__time { // .data-cell__time
+		color: #a19e9e;
+	}
+
+	&__title { // .data-cell__title
+		@media @lg {
+			position: absolute;
+			top: 16px;
+			left: 16px;
+			font-weight: 500;
+			color: @color-dark-blue;
+			font-size: 21px;
+			line-height: 35px;
+		}
+	}
+
+	&__currency { // .data-cell__currency
+		@media @lg {
+			order: 2;
+			margin-top: 20px;
+			margin-right: 16px;
+		}
+	}
+
+	&__currency-box { // .data-cell__currency-box
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&__currency-icon { // .data-cell__currency-icon
+		margin-right: 8px;
+		width: 24px;
+		height: 24px;
+	}
+
+	&__amount,
+	&__fee,
+	&__status {
+		@media @lg {
+			font-size: 21px;
+			line-height: 35px;
+			display: flex;
+			flex-direction: column;
+
+			&:before {
+				content: attr(data-cell-header);
+				font-size: 12px;
+				font-weight: 900;
+				line-height: 15px;
+				color: @color-blue;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__amount { // .data-cell__amount
+		@media @lg {
+			order: 1;
+			margin-right: 15px;
+		}
+	}
+
+	&__fee { // .data-cell__fee
+		@media @lg {
+			order: 3;
+			margin-left: auto;
+		}
+	}
+
+	&__status { // .data-cell__status
+		@media @lg {
+			position: absolute;
+			bottom: 20px;
+			left: 16px;
+			font-size: 16px;
+			line-height: 21px;
+		}
+	}
+}

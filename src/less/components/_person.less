@@ -1,0 +1,114 @@
+.person {
+  &__photo {
+    display: block;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 34px;
+    border-radius: 200px;
+
+    @media @md {
+      width: 170px;
+      height: 170px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__content {
+    max-width: 1030px;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 38px;
+
+    @media @md {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    margin-bottom: 10px;
+    padding-left: 0;
+
+    .person__list & {
+      padding-top: 10px;
+      padding-left: 25px;
+
+      @media @md {
+        padding-left: 16px;
+      }
+    }
+  }
+
+  &__list-item {
+    display: block;
+    list-style-type: none;
+    margin-bottom: 10px;
+
+    &::before {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 17px;
+      border-radius: 8px;
+      background-color: @color-gray;
+      content: "";
+      transform: translateY(-3px);
+
+      .person__list .person__list & {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &__linkedin-bottom {
+    display: none;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: right;
+
+    @media @md {
+      display: block;
+    }
+  }
+
+  &__linkedin {
+    color: @color-blue;
+    text-decoration: none;
+
+    &:hover {
+      color: @color-dark-blue;
+    }
+  }
+
+  &__linkedin-icon {    
+    width: 32px;
+    height: auto;
+    margin-left: 6px;
+    margin-right: 10px;
+    font-size: 32px;
+    transform: translateY(3px);
+    transition: color 0.2s;
+
+    @media @lg {
+      width: 27px;
+    }
+
+    @media @md {
+      display: none;
+    }
+
+    .person__linkedin-bottom & {
+      margin-left: 4px;
+      margin-right: 0;
+      transform: translateY(4px);
+
+      @media @md {
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/person.html" import person %}
+
+{% block page_title %}		
+	Dominic Sergi
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem=4) }}
+{% endblock %}
+{% block page_content %}
+		<section class="breadcrumbs">
+				<div class="container">
+						<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Home</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="about.html">About</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<span class="breadcrumbs__current">Dominic Sergi</span></li>
+						</ul>
+				</div>
+		</section>
+		{% call person(name="Dominic Sergi", photo="dominic_sergi.jpg", linkedin="https://www.linkedin.cn/") %}
+				<p class="person__paragraph">Dominic Sergi is the President and CEO of Clear Height Properties, where he is responsible for setting and executing on the company’s long-term investment criteria. Since 2010, he has led his team to acquiring and developing over $250 million in assets. Dominic oversees all aspects of the company’s integrated platform of management, leasing and construction.</p>
+				<p class="person__paragraph">Dominic is active in various industry, community and charitable organizations. He’s a member of the local real estate chapters of NAIOP, SIOR, ULI and REIA.  And charitable organizations of PAWS Chicago, USO of Illinois, and the Leukemia and Lymphoma Society.</p>
+				<p class="person__paragraph">Dominic also serves on the board of several companies such as Cresco Labs, Conversion Energy Systems, and BizAssure. </p>
+				<p class="person__paragraph">Dominic A. Sergi is a licensed Managing Broker with the State of Illinois.</p>
+		{% endcall %}
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem=3, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}

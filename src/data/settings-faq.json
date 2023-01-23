@@ -1,0 +1,16 @@
+{
+  "settingsFaq": [
+    {
+      "question": "Account maintenance",
+      "answer": "In cras sit nulla turpis nunc, posuere ut at proin. Lectus ullamcorper id faucibus nunc tellus lacus. Lorem vel morbi sem at consequat elementum malesuada integer integer. Ut tellus risus sed sagittis phasellus gravida. Tristique aenean nibh sed urna tristique lorem eget. Ultrices ut augue phasellus eget vitae, sed."
+    },
+    {
+      "question": "Advanced settings",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tortor faucibus parturient ullamcorper aliquam. Neque tellus nulla neque sociis id ac, vitae. Faucibus tellus id dui aliquam id. Sit justo et vitae aliquam neque. Eu elementum dolor venenatis nunc, consequat neque dis in. Proin aliquet et cras lorem urna gravida aliquam aliquam hac. Sed turpis velit lacus proin arcu ut commodo sem. Facilisis est pellentesque mauris at quam velit sagittis. In lectus lectus id suspendisse lobortis bibendum diam. Libero, facilisis molestie volutpat massa laoreet. Purus integer viverra in vulputate duis enim, eget ut lacus."
+    },
+    {
+      "question": "Value indicator",
+      "answer": "Amet, et id adipiscing ultrices nisi, ut id sit netus. Sagittis, vitae vitae sed molestie eget vulputate hendrerit. Et quis eu ut non lacus, mauris leo. Sed auctor amet, elementum varius non interdum. Ultricies est, a sed euismod eu elementum tortor vulputate. Pellentesque lacinia in lacus vitae sollicitudin ornare. Sem ultrices ornare mi diam euismod lectus sit mauris. Sit lacus scelerisque varius pellentesque id risus dignissim enim. Magna in rutrum diam in vulputate fames nunc egestas odio. Duis eget pellentesque proin facilisis sit eget fringilla pharetra lacus. Tellus ut nec nec vel accumsan id non ipsum. Ante donec egestas nec aliquet maecenas purus. Adipiscing tellus turpis libero justo in ante a dignissim vel."
+    }
+  ]
+}

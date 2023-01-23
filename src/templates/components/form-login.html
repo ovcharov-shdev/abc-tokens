@@ -1,0 +1,32 @@
+
+{% from "templates/components/form-group.html" import formGroup %}
+{% from "templates/components/button.html" import button %}
+
+<form action="#" class="modal--login__form form-login">
+		{{formGroup(id='login-email',
+				inputType="email",
+				labelText='Email',
+				isRequired=true,
+				class="modal__form-group")
+		}}
+		{{formGroup(id='login-password',
+				inputType="password",
+				labelText='Password',
+				isRequired=true,
+				class="modal__form-group")
+		}}
+		<div class="checkbox-group form-login__checkbox">
+			<input class="checkbox-group__checkbox" type="checkbox" id="login-remember">
+			<label class="checkbox-group__label" for="login-remember">Remember me</label>
+		</div>	
+		<div class="form-login__submit-row">
+			{{ button(type="3d", text="Login", class="modal--login__submit", isSubmit=true)}}	
+		</div>
+		<p class="modal--login__text">
+			<a class="modal--login__link" href="#" data-form="restore-email">Forgot password?</a>
+		</p>	
+		<p class="modal--login__text">
+			Do not have an account? 
+			<a class="modal--login__link" href="#" data-form="register">Register</a>
+		</p>																					
+</form>	

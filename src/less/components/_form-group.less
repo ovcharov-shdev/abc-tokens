@@ -1,0 +1,183 @@
+.form-group {
+  padding-top: 21px;
+  padding-bottom: 24px;
+
+  &--invest {
+    margin-bottom: 10px;
+
+    @media @xl {
+      align-self: stretch;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    .form-group--date & {
+      &::before {
+        position: absolute;
+        top: 21px;
+        right: 23px;
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+        background-image: url("../images/calendar.svg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        content: "";
+        pointer-events: none;
+      }
+    }
+    .form-group--card & {
+      &::before {
+        position: absolute;
+        top: 25px;
+        right: 17px;
+        width: 47px;
+        height: 15px;
+        background-color: #fff;
+        background-image: url("../images/visa.svg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        content: "";
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 23px;
+    left: 19px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #837f7f;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    transition: transform 0.2s, font-size 0.2s, color 0.2s;
+    pointer-events: none;
+
+    .form-group--required & {
+      &::after {
+        display: inline-block;
+        margin-left: 3px;
+        color: @color-red;
+        content: "*";
+      }
+    }
+
+    .form-group--show-label & {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 500;
+      color: @color-blue;
+      transform: translate(-13px, -45px);
+    }
+
+    .form-group--show-label.form-group--error & {
+      color: @color-red;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    display: block;
+    width: 100%;
+    padding: 23px 20px 19px;
+    background-color: #fff;
+    border: 1px solid #d1d0d0;
+    border-radius: 7px;
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: @color-gray;
+    transition: border-color 0.2s;
+    box-shadow: inset 0 4px 16px 0 rgba(#221e1e, 0.03);
+
+    &:focus {
+      border-color: @color-blue;
+      outline: none;
+    }
+
+    .form-group--error & {
+      border-color: @color-red;
+    }
+
+    .form-group--disabled & {
+      background-color: #fbfbfb;
+      border-color: #fbfbfb;
+      opacity: 1;
+      color: #706c6c;
+    }
+  }
+
+  &__input {
+    .form-group--date & {
+      &[type="date"] {
+        padding-top: 20px;
+        padding-bottom: 17px;
+      }
+    }
+  }
+
+  &__textarea {
+    height: 167px;
+    resize: none;
+  }
+
+  &__error {
+    position: absolute;
+    left: 0;
+    bottom: -26px;
+    visibility: hidden;
+    padding-left: 6px;
+    font-size: 14px;
+    line-height: 21px;
+    color: @color-red;
+
+    .form-group--error & {
+      visibility: visible;
+    }
+  }
+
+  &__after {
+    position: absolute;
+    left: 0;
+    bottom: -26px;
+    padding-left: 6px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #716d6d;
+  }
+
+  &__button {
+    border: 0;
+    background-color: #fff;
+    position: absolute;
+    top: 17px;
+    right: 14px;
+    cursor: pointer;
+    color: @color-gray;
+    border-radius: 3px;
+    width: 32px;
+    height: 32px;
+    padding: 2px 0 0;
+    box-shadow: 0 0 10px 4px #fff;
+
+    &:hover:active {
+      background-color: #eee;
+    }
+
+    .form-group--disabled & {
+      background-color: #fbfbfb;
+      box-shadow: 0 0 10px 4px #fbfbfb;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

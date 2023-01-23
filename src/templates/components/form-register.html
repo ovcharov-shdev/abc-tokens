@@ -1,0 +1,56 @@
+{% from "templates/components/form-group.html" import formGroup %}
+{% from "templates/components/button.html" import button %}
+
+<form action="#" class="modal--login__form form-register">
+		<div class="form-register__row">
+				{{formGroup(id='register-first-name',
+						labelText='First Name',
+						isRequired=true,
+						class="modal__form-group form-register__col")
+				}}
+				{{formGroup(id='register-last-name',
+						labelText='Last Name',
+						isRequired=true,
+						class="modal__form-group form-register__col")
+				}}
+		</div>
+				{{formGroup(id='register-email',
+						inputType="email",
+						labelText='Email',
+						isRequired=true,
+						class="modal__form-group")
+				}}
+				{{formGroup(id='register-password',
+						inputType="password",
+						labelText='Password',
+						isRequired=true,
+						class="modal__form-group")
+				}}
+				{{formGroup(id='register-password-confirm',
+						inputType="password",
+						labelText='Password Confirmation',
+						isRequired=true,
+						class="modal__form-group")
+				}}
+		<div class="form-register__row">
+				{{formGroup(id='register-phone',
+						inputType="tel",
+						labelText='Phone',
+						isRequired=true,
+						class="modal__form-group form-register__col")
+				}}
+				{{formGroup(id='register-birthday',
+						inputType="text",
+						labelText='Birthday',
+						isRequired=true,
+						class="modal__form-group form-register__col form-group--date")
+				}}
+		</div>
+		<div class="form-register__submit-row">
+			{{ button(type="3d", text="Register", class="modal--login__submit", isSubmit=true)}}	
+		</div>
+		<p class="modal--login__text">
+			Already have an account? 
+			<a class="modal--login__link" href="#" data-form="login">Log In</a>
+		</p>
+</form>

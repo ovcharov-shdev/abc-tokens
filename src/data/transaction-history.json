@@ -1,0 +1,85 @@
+{
+  "transactionHistory": [
+    {
+      "type": "Purchase",
+      "date": "Jan 12, 2021",
+      "time": "07:12:32",
+      "amount": "2.32391123",
+      "currency": "USD",
+      "fee": "$2.32",
+      "status": "Complete"
+    },
+    {
+      "type": "Purchase",
+      "date": "Jan 14, 2021",
+      "time": "10:15:02",
+      "amount": "2.32391123",
+      "currency": "BTC",
+      "fee": "$2.32",
+      "status": "Complete"
+    },
+    {
+      "type": "Purchase",
+      "date": "Jan 28, 2021",
+      "time": "15:24:28",
+      "amount": "2.32391123",
+      "currency": "ABC",
+      "fee": "$2.32",
+      "status": "Complete"
+    },
+    {
+      "type": "Sale",
+      "date": "Feb 1, 2021",
+      "time": "07:12:32",
+      "amount": "2.32391123",
+      "currency": "DAI",
+      "fee": "$2.32",
+      "status": "Complete"
+    },
+    {
+      "type": "Purchase",
+      "date": "Feb 1, 2021",
+      "time": "20:59:11",
+      "amount": "2.32391123",
+      "currency": "USD",
+      "fee": "$2.32",
+      "status": "Complete"
+    },
+    {
+      "type": "Deposit",
+      "date": "Feb 5, 2021",
+      "time": "07:12:32",
+      "amount": "2.32391123",
+      "currency": "BTC",
+      "fee": "$2.32",
+      "status": "Complete"
+    },
+    {
+      "type": "Deposit",
+      "date": "Feb 12, 2021",
+      "time": "22:17:55",
+      "amount": "2.32391123",
+      "currency": "BTC",
+      "fee": "$2.32",
+      "status": "Complete"
+    },
+    {
+      "type": "Sale",
+      "date": "Feb 17, 2021",
+      "time": "17:18:11",
+      "amount": "2.32391123",
+      "currency": "ETH",
+      "fee": "$2.32",
+      "status": "Pending"
+    },
+    {
+      "type": "Withdraw",
+      "date": "Mar 1, 2021",
+      "time": "07:12:32",
+      "amount": "2.32391123",
+      "currency": "ABC",
+      "fee": "$2.32",
+      "status": "Pending"
+    }
+  ]
+}

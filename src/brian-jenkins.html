@@ -1,0 +1,43 @@
+{% extends "./templates/layout/_base.html" %}
+
+{% from "templates/components/header.html" import header %}
+{% from "templates/components/footer.html" import footer %}
+
+{% from "templates/components/person.html" import person %}
+
+{% block page_title %}		
+	Brian Jenkins
+{% endblock %}
+
+{% block page_header %}
+		{{ header(data=main_menu, activeItem=4) }}
+{% endblock %}
+{% block page_content %}
+		<section class="breadcrumbs">
+				<div class="container">
+						<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Home</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="about.html">About</a>
+								</li>
+								<li class="breadcrumbs__item">
+										<span class="breadcrumbs__current">Brian Jenkins</span></li>
+						</ul>
+				</div>
+		</section>
+		{% call person(name="Brian Jenkins", photo="brian_jenkins.jpg") %}
+				<p class="person__paragraph">In joining Bank of Hope, I bring more than four decades of experience in finance, news and communications. Since 2017, I’ve been a speaker, panelist, moderator or interviewer at more than 20 blockchain and digital technology conferences, seminars and webinars.</p>
+				<p class="person__paragraph">My BusinessBlock advisory team brought our clients more than a century of combined experience in IT, financial technology, business management and communications.</p>
+				<p class="person__paragraph">As an investment banker before that, I worked with accredited investors to fund early-stage companies in blockchain, data analysis, medical technology, real estate development, hospitality and green technology.</p>
+				<p class="person__paragraph">From 2009 to 2014, I was a fully-licensed financial advisor with AXA Advisors (now Equitable Advisors), helping individuals, families and business owners with investments, retirement savings and insurance (life, health, long-term care and disability).</p>
+				<p class="person__paragraph">From 1982-1998, I served as a correspondent and anchor for CNN, based in Los Angeles, Tokyo and then New York. During the Persian Gulf War in 1991, I reported from warships and live from the front line of ground combat in Kuwait. In 1993, I went live from the scene of the World Trade Center bombing in Lower Manhattan and then eight weeks later from the Branch Davidian standoff outside Waco, Texas. From 1986 to 1988, I reported on coup attempts in the Philippines and riots in South Korea. I shared in an Emmy Award, a Peabody Award and a duPont-Columbia Silver Baton, all for CNN's coverage of the demonstrations in Beijing's Tiananmen Square.</p>
+				<p class="person__paragraph">At the Summer Olympics in Los Angeles in 1984 and then in Seoul in 1988, I was CNN’s principal news reporter. I also covered two U.S. presidential campaigns, many prominent criminal and civil trials, plus major events and issues in the realms of finance, energy, transportation, technology, medical science, sports and entertainment.</p>
+				<p class="person__paragraph">Then I created my own production company, Can Do Voice and Video, and traveled around the U.S. to create informational videos for corporations, foundations and government agencies.</p>
+		{% endcall %}
+		{% include "templates/components/modals.html" %}
+{% endblock %}
+{% block page_footer %}
+		{{ footer(activeItem=3, data={"footer_menu": footer_menu, "social_menu": social_menu}) }}
+{% endblock %}
